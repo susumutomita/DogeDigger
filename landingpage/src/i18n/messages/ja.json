@@ -1,0 +1,136 @@
+{
+  "navigation": {
+    "features": "特徴",
+    "demo": "デモ",
+    "pricing": "料金",
+    "team": "チーム",
+    "early_access": "早期アクセス"
+  },
+  "hero": {
+    "title_1": "犬も歩けば",
+    "title_2": "トークン掘れる",
+    "subtitle": "歩けば宝物が見つかる。",
+    "description": "ロボット犬と一緒にAR宝探しをし、AI生成アートをNFTとして所有できる、新感覚のデジタル×フィジカル体験。",
+    "cta_primary": "早期アクセスに登録",
+    "cta_secondary": "デモを見る"
+  },
+  "features": {
+    "title": "3つの革新的技術が融合",
+    "subtitle": "ロボティクス × AR × ブロックチェーンで実現する、未来の宝探し体験",
+    "robot": {
+      "title": "ロボット犬と冒険",
+      "description": "最先端のロボット犬が現実世界をマッピングしながら、あなたと一緒に宝探しの冒険へ",
+      "details": "内蔵センサーとカメラで周囲をスキャンし、UnityのARマッピング技術で現実とデジタルをシンクロ"
+    },
+    "ar": {
+      "title": "AR宝探し体験",
+      "description": "スマホやMeta Quest 3を通じて、現実空間に隠された宝箱を発見",
+      "details": "公園やイベント会場が冒険の舞台に。家族や友人と一緒に楽しめる新しいお出かけコンテンツ"
+    },
+    "ai": {
+      "title": "AI生成アート",
+      "description": "その場の特徴を元に、世界に一つだけのアートを生成",
+      "details": "地形やランドマークを元にテキストプロンプトを生成し、高品質な画像をクラウドで生成"
+    },
+    "nft": {
+      "title": "NFTとして永久保存",
+      "description": "生成されたアートは即座にNFT化",
+      "details": "Baseチェーン上のスマートコントラクトで、その場でミント。後から転売や交換も可能"
+    },
+    "learn_more": "詳しく見る"
+  },
+  "demo": {
+    "title": "実際の体験を見る",
+    "subtitle": "ロボット犬と一緒にAR宝探しをする様子をご覧ください",
+    "video_title": "DogeDigger デモビデオ"
+  },
+  "pricing": {
+    "title": "シンプルな料金プラン",
+    "subtitle": "あなたのニーズに合わせて選べる3つのプラン",
+    "team_size": "利用人数",
+    "billing_cycle": "支払いサイクル",
+    "monthly": "月額",
+    "yearly": "年額",
+    "discount": "20% OFF",
+    "guarantee": "全てのプランに30日間の返金保証が付いています",
+    "plans": {
+      "basic": {
+        "name": "体験プラン",
+        "description": "初めての方におすすめ",
+        "features": ["1回の宝探し体験", "AI生成アート1点", "NFTミント", "基本サポート"]
+      },
+      "premium": {
+        "name": "プレミアムプラン",
+        "description": "最も人気のプラン",
+        "features": [
+          "月5回の宝探し体験",
+          "AI生成アート5点",
+          "NFTミント無制限",
+          "優先サポート",
+          "限定イベント招待",
+          "ロボット犬カスタマイズ"
+        ]
+      },
+      "enterprise": {
+        "name": "エンタープライズ",
+        "description": "イベント・企業向け",
+        "features": [
+          "無制限の体験回数",
+          "カスタムAIモデル",
+          "専用ロボット犬",
+          "24/7サポート",
+          "APIアクセス",
+          "ホワイトラベル対応"
+        ]
+      }
+    },
+    "cta": "今すぐ始める",
+    "contact": "お問い合わせ",
+    "per_month": "/月",
+    "per_person": "1人あたり",
+    "per_session": "/回",
+    "yearly_discount": "年額 ¥{amount} (20%割引適用)"
+  },
+  "waitlist": {
+    "title": "早期アクセスに登録",
+    "subtitle": "製品ローンチ前に限定特典を手に入れよう",
+    "incentives": {
+      "early_access": "早期アクセス権",
+      "nft_airdrop": "限定NFTエアドロップ",
+      "discount": "初回利用50%OFF",
+      "vip_community": "VIPコミュニティ招待"
+    },
+    "form": {
+      "email": "メールアドレス",
+      "email_placeholder": "your@email.com",
+      "name": "お名前（任意）",
+      "name_placeholder": "山田太郎",
+      "interests": "興味のある機能（複数選択可）",
+      "source": "どこで知りましたか？",
+      "submit": "早期アクセスを申し込む",
+      "submitting": "送信中...",
+      "privacy": "登録することで、利用規約とプライバシーポリシーに同意したものとみなされます。"
+    },
+    "success": {
+      "title": "登録ありがとうございます！",
+      "message": "早期アクセスの準備ができ次第、メールでお知らせします。"
+    },
+    "social_proof": "{count}人が既に登録済み"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "最新情報をお届け",
+      "description": "プロダクトアップデートや限定オファーをメールでお知らせします",
+      "submit": "購読する",
+      "success": "✓ 登録完了"
+    },
+    "links": {
+      "product": "プロダクト",
+      "company": "会社情報",
+      "legal": "法的情報"
+    },
+    "status": "All systems operational",
+    "copyright": "© 2025 DogeDigger. All rights reserved.",
+    "made_with": "Made with 🐕 by the DogeDigger team"
+  }
+}

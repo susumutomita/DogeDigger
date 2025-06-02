@@ -12,16 +12,16 @@ const config: Config = {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         primary: {
-          DEFAULT: '#FF6B35',
-          dark: '#E55A2B',
+          DEFAULT: '#2563eb',
+          dark: '#1d4ed8',
         },
         secondary: {
-          DEFAULT: '#4ECDC4',
-          dark: '#3BA99C',
+          DEFAULT: '#0891b2',
+          dark: '#0e7490',
         },
         accent: {
-          DEFAULT: '#FFE66D',
-          dark: '#FFD93D',
+          DEFAULT: '#f59e0b',
+          dark: '#d97706',
         },
       },
       animation: {

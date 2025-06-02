@@ -13,10 +13,12 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.0",
+    "@supabase/supabase-js": "^2.49.9",
     "clsx": "^2.1.0",
     "framer-motion": "^11.18.2",
     "lucide-react": "^0.400.0",
     "next": "15.3.3",
+    "next-intl": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.50.0",
