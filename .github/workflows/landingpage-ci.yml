@@ -1,0 +1,42 @@
+name: Landing Page CI
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'landingpage/**'
+  push:
+    branches: [main]
+    paths:
+      - 'landingpage/**'
+
+jobs:
+  lint-and-type-check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./landingpage
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: './landingpage/package-lock.json'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Type check
+        run: npm run type-check
+
+      - name: Build project
+        run: npm run build
