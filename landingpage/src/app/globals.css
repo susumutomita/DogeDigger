@@ -48,7 +48,9 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply antialiased;
+    background-color: var(--background);
+    color: var(--foreground);
     font-family:
       var(--font-inter),
       system-ui,
