@@ -32,9 +32,18 @@ export default function LoadingScreen() {
           <div className="flex items-center justify-center space-x-1">
             <span className="text-gray-600 dark:text-gray-400">Loading</span>
             <div className="flex space-x-1">
-              <span className="w-2 h-2 bg-[#FF6B35] rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
-              <span className="w-2 h-2 bg-[#4ECDC4] rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
-              <span className="w-2 h-2 bg-[#FFE66D] rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+              <span
+                className="w-2 h-2 bg-[#FF6B35] rounded-full animate-bounce"
+                style={{ animationDelay: '0ms' }}
+              ></span>
+              <span
+                className="w-2 h-2 bg-[#4ECDC4] rounded-full animate-bounce"
+                style={{ animationDelay: '150ms' }}
+              ></span>
+              <span
+                className="w-2 h-2 bg-[#FFE66D] rounded-full animate-bounce"
+                style={{ animationDelay: '300ms' }}
+              ></span>
             </div>
           </div>
         </div>

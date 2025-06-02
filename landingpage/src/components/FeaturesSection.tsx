@@ -8,7 +8,8 @@ const features = [
     icon: '🤖',
     title: 'ロボット犬と冒険',
     description: '最先端のロボット犬が現実世界をマッピングしながら、あなたと一緒に宝探しの冒険へ',
-    details: '内蔵センサーとカメラで周囲をスキャンし、UnityのARマッピング技術で現実とデジタルをシンクロ',
+    details:
+      '内蔵センサーとカメラで周囲をスキャンし、UnityのARマッピング技術で現実とデジタルをシンクロ',
     gridClass: 'md:col-span-2 md:row-span-1',
     bgColor: 'from-[#FF6B35]/10 to-[#FFE66D]/10',
   },
@@ -110,18 +111,30 @@ export default function FeaturesSection() {
                     </p>
 
                     {/* Expanded Details */}
-                    <div className={`overflow-hidden transition-all duration-300 ${hoveredFeature === feature.id ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
-                        {feature.details}
-                      </p>
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ${hoveredFeature === feature.id ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}
+                    >
+                      <p className="text-sm text-gray-500 dark:text-gray-400">{feature.details}</p>
                     </div>
 
                     {/* Arrow Icon */}
                     <div className="mt-auto pt-4">
-                      <div className={`inline-flex items-center text-sm font-medium text-[#FF6B35] transition-transform duration-300 ${hoveredFeature === feature.id ? 'translate-x-2' : ''}`}>
+                      <div
+                        className={`inline-flex items-center text-sm font-medium text-[#FF6B35] transition-transform duration-300 ${hoveredFeature === feature.id ? 'translate-x-2' : ''}`}
+                      >
                         詳しく見る
-                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <svg
+                          className="w-4 h-4 ml-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
                         </svg>
                       </div>
                     </div>

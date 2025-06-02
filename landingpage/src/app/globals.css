@@ -1,27 +1,27 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   /* Primary Colors */
-  --color-primary: #FF6B35;
-  --color-primary-dark: #E55A2B;
-  --color-secondary: #4ECDC4;
-  --color-secondary-dark: #3BA99C;
-  --color-accent: #FFE66D;
-  --color-accent-dark: #FFD93D;
-  
+  --color-primary: #ff6b35;
+  --color-primary-dark: #e55a2b;
+  --color-secondary: #4ecdc4;
+  --color-secondary-dark: #3ba99c;
+  --color-accent: #ffe66d;
+  --color-accent-dark: #ffd93d;
+
   /* Base Colors */
-  --color-dark: #1A1A2E;
-  --color-light: #F5F5F5;
-  --color-white: #FFFFFF;
+  --color-dark: #1a1a2e;
+  --color-light: #f5f5f5;
+  --color-white: #ffffff;
   --color-black: #000000;
-  
+
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  --gradient-mesh: 
+  --gradient-mesh:
     radial-gradient(at 40% 20%, var(--color-primary) 0px, transparent 50%),
     radial-gradient(at 80% 0%, var(--color-secondary) 0px, transparent 50%),
     radial-gradient(at 0% 50%, var(--color-accent) 0px, transparent 50%);
-  
+
   /* Light Mode */
   --background: var(--color-light);
   --foreground: var(--color-dark);
@@ -42,81 +42,85 @@
   * {
     /* Remove border-border as it's not defined */
   }
-  
+
   html {
     @apply scroll-smooth;
   }
-  
+
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    font-family:
+      var(--font-inter),
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
 }
 
 @theme {
-  --color-primary: #FF6B35;
-  --color-primary-dark: #E55A2B;
-  --color-secondary: #4ECDC4;
-  --color-secondary-dark: #3BA99C;
-  --color-accent: #FFE66D;
-  --color-accent-dark: #FFD93D;
-  --color-dark: #1A1A2E;
-  --color-light: #F5F5F5;
+  --color-primary: #ff6b35;
+  --color-primary-dark: #e55a2b;
+  --color-secondary: #4ecdc4;
+  --color-secondary-dark: #3ba99c;
+  --color-accent: #ffe66d;
+  --color-accent-dark: #ffd93d;
+  --color-dark: #1a1a2e;
+  --color-light: #f5f5f5;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .gradient-text {
     background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .glass-effect {
     backdrop-filter: blur(12px);
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
+
   /* Animation utilities */
   .animate-fadeIn {
     animation: fadeIn 0.8s ease-out forwards;
   }
-  
+
   .animate-slideUp {
     animation: slideUp 0.8s ease-out forwards;
   }
-  
+
   .animate-bounce-slow {
     animation: bounce-slow 2s ease-in-out infinite;
   }
-  
+
   .animate-scale-in {
     animation: scaleIn 0.8s ease-out forwards;
   }
-  
+
   .animate-fade-up {
     animation: fadeUp 0.8s ease-out forwards;
   }
-  
+
   .animate-scale-x {
     animation: scaleX 0.3s ease-out forwards;
   }
-  
+
   .animate-fade-up-delay-1 {
     animation: fadeUp 0.8s ease-out 0.4s forwards;
     opacity: 0;
   }
-  
+
   .animate-fade-up-delay-2 {
     animation: fadeUp 0.8s ease-out 0.6s forwards;
     opacity: 0;
   }
-  
+
   .animate-fade-up-delay-3 {
     animation: fadeUp 0.8s ease-out 0.8s forwards;
     opacity: 0;
@@ -145,7 +149,8 @@
 }
 
 @keyframes bounce-slow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -176,7 +181,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg);
   }
   33% {
@@ -197,52 +203,52 @@
 }
 
 /* Custom Range Slider */
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none;
   appearance: none;
   background: transparent;
   cursor: pointer;
 }
 
-input[type="range"]::-webkit-slider-track {
+input[type='range']::-webkit-slider-track {
   height: 8px;
   background: #e5e7eb;
   border-radius: 4px;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
   height: 20px;
-  background: #FF6B35;
+  background: #ff6b35;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-input[type="range"]::-webkit-slider-thumb:hover {
+input[type='range']::-webkit-slider-thumb:hover {
   transform: scale(1.2);
   box-shadow: 0 0 0 8px rgba(255, 107, 53, 0.1);
 }
 
-input[type="range"]::-moz-range-track {
+input[type='range']::-moz-range-track {
   height: 8px;
   background: #e5e7eb;
   border-radius: 4px;
 }
 
-input[type="range"]::-moz-range-thumb {
+input[type='range']::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: #FF6B35;
+  background: #ff6b35;
   border: none;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-input[type="range"]::-moz-range-thumb:hover {
+input[type='range']::-moz-range-thumb:hover {
   transform: scale(1.2);
   box-shadow: 0 0 0 8px rgba(255, 107, 53, 0.1);
 }

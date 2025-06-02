@@ -11,12 +11,7 @@ const basePlans = [
     basePrice: 3000,
     perSession: 3000,
     description: '初めての方におすすめ',
-    features: [
-      '1回の宝探し体験',
-      'AI生成アート1点',
-      'NFTミント',
-      '基本サポート',
-    ],
+    features: ['1回の宝探し体験', 'AI生成アート1点', 'NFTミント', '基本サポート'],
     highlighted: false,
   },
   {
@@ -103,7 +98,7 @@ export default function PricingSection() {
                 onChange={(e) => setSelectedTeamSize(parseInt(e.target.value))}
                 className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
                 style={{
-                  background: `linear-gradient(to right, #FF6B35 0%, #FF6B35 ${(selectedTeamSize - 1) * 5}%, #e5e7eb ${(selectedTeamSize - 1) * 5}%, #e5e7eb 100%)`
+                  background: `linear-gradient(to right, #FF6B35 0%, #FF6B35 ${(selectedTeamSize - 1) * 5}%, #e5e7eb ${(selectedTeamSize - 1) * 5}%, #e5e7eb 100%)`,
                 }}
               />
               <div className="flex justify-between text-xs text-gray-500 mt-2">
@@ -119,19 +114,17 @@ export default function PricingSection() {
               <div className="flex items-center bg-gray-200 dark:bg-gray-700 rounded-full p-1">
                 <button
                   onClick={() => setBillingCycle('monthly')}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${billingCycle === 'monthly'
-                      ? 'bg-white dark:bg-gray-900 shadow-md'
-                      : ''
-                    }`}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                    billingCycle === 'monthly' ? 'bg-white dark:bg-gray-900 shadow-md' : ''
+                  }`}
                 >
                   月額
                 </button>
                 <button
                   onClick={() => setBillingCycle('yearly')}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 relative ${billingCycle === 'yearly'
-                      ? 'bg-white dark:bg-gray-900 shadow-md'
-                      : ''
-                    }`}
+                  className={`px-6 py-2 rounded-full transition-all duration-300 relative ${
+                    billingCycle === 'yearly' ? 'bg-white dark:bg-gray-900 shadow-md' : ''
+                  }`}
                 >
                   年額
                   <span className="absolute -top-8 right-0 bg-[#4ECDC4] text-white text-xs px-2 py-1 rounded-full">
@@ -145,16 +138,21 @@ export default function PricingSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {basePlans.map((plan, index) => {
-            const price = calculatePrice(plan.basePrice, selectedTeamSize, billingCycle === 'yearly');
-            const displayPrice = price ? Math.floor(price / (billingCycle === 'yearly' ? 12 : 1)) : null;
+            const price = calculatePrice(
+              plan.basePrice,
+              selectedTeamSize,
+              billingCycle === 'yearly'
+            );
+            const displayPrice = price
+              ? Math.floor(price / (billingCycle === 'yearly' ? 12 : 1))
+              : null;
 
             return (
               <motion.div
                 key={plan.id}
-                className={`relative bg-white dark:bg-gray-800 rounded-2xl p-8 ${plan.highlighted
-                    ? 'shadow-2xl ring-2 ring-[#FF6B35] scale-105'
-                    : 'shadow-lg'
-                  }`}
+                className={`relative bg-white dark:bg-gray-800 rounded-2xl p-8 ${
+                  plan.highlighted ? 'shadow-2xl ring-2 ring-[#FF6B35] scale-105' : 'shadow-lg'
+                }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -175,9 +173,7 @@ export default function PricingSection() {
                 <div className="mb-6">
                   {displayPrice !== null ? (
                     <>
-                      <span className="text-4xl font-bold">
-                        ¥{displayPrice.toLocaleString()}
-                      </span>
+                      <span className="text-4xl font-bold">¥{displayPrice.toLocaleString()}</span>
                       <span className="text-gray-600 dark:text-gray-400">/月</span>
                       {selectedTeamSize > 1 && plan.perSession && (
                         <p className="text-sm text-gray-500 mt-1">
@@ -205,11 +201,14 @@ export default function PricingSection() {
                 </ul>
 
                 <button
-                  onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
-                  className={`w-full py-3 rounded-full font-medium transition-all duration-300 ${plan.highlighted
+                  onClick={() =>
+                    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                  className={`w-full py-3 rounded-full font-medium transition-all duration-300 ${
+                    plan.highlighted
                       ? 'bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white hover:shadow-lg hover:scale-105'
                       : 'border-2 border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35] hover:text-white'
-                    }`}
+                  }`}
                 >
                   {plan.basePrice === null ? 'お問い合わせ' : '今すぐ始める'}
                 </button>

@@ -50,7 +50,7 @@ export default function HeroSection() {
               height: `${particle.size}px`,
               backgroundColor: particle.color,
               opacity: 0.3,
-              animation: `float ${10 + particle.id % 10}s infinite ease-in-out`,
+              animation: `float ${10 + (particle.id % 10)}s infinite ease-in-out`,
               animationDelay: `${particle.id * 0.5}s`,
             }}
           />
@@ -65,7 +65,7 @@ export default function HeroSection() {
             radial-gradient(at ${mousePosition.x}px ${mousePosition.y}px, #FF6B35 0px, transparent 50%),
             radial-gradient(at 80% 0%, #4ECDC4 0px, transparent 50%),
             radial-gradient(at 0% 50%, #FFE66D 0px, transparent 50%)
-          `
+          `,
         }}
       />
 
@@ -94,13 +94,17 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up-delay-3">
             <button
               className="px-8 py-4 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-bold rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95"
-              onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
+              }
             >
               早期アクセスに登録
             </button>
             <button
               className="px-8 py-4 border-2 border-[#FF6B35] text-[#FF6B35] font-bold rounded-full hover:bg-[#FF6B35] hover:text-white transition-all duration-300 hover:scale-105 active:scale-95"
-              onClick={() => document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })
+              }
             >
               デモを見る
             </button>

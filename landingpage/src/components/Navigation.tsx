@@ -43,10 +43,11 @@ export default function Navigation() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
             ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg'
             : 'bg-transparent'
-          }`}
+        }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -66,10 +67,11 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative px-2 py-1 text-sm font-medium transition-colors duration-200 ${activeSection === item.href.slice(1)
+                  className={`relative px-2 py-1 text-sm font-medium transition-colors duration-200 ${
+                    activeSection === item.href.slice(1)
                       ? 'text-[#FF6B35]'
                       : 'text-gray-700 dark:text-gray-300 hover:text-[#FF6B35]'
-                    }`}
+                  }`}
                 >
                   {item.label}
                   {activeSection === item.href.slice(1) && (
@@ -78,7 +80,9 @@ export default function Navigation() {
                 </Link>
               ))}
               <button
-                onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
+                }
                 className="px-6 py-2 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-medium rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[#FF6B35]/25"
               >
                 早期アクセス
@@ -90,21 +94,12 @@ export default function Navigation() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d={
-                    isMobileMenuOpen
-                      ? 'M6 18L18 6M6 6l12 12'
-                      : 'M4 6h16M4 12h16M4 18h16'
-                  }
+                  d={isMobileMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
                 />
               </svg>
             </button>
@@ -113,8 +108,9 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-96' : 'max-h-0'
-            } overflow-hidden bg-white dark:bg-gray-900 shadow-lg`}
+          className={`md:hidden transition-all duration-300 ${
+            isMobileMenuOpen ? 'max-h-96' : 'max-h-0'
+          } overflow-hidden bg-white dark:bg-gray-900 shadow-lg`}
         >
           <div className="px-4 py-4 space-y-4">
             {navItems.map((item) => (
@@ -143,7 +139,9 @@ export default function Navigation() {
               <p className="text-sm">今なら早期登録で50%OFF！</p>
             </div>
             <button
-              onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
+              }
               className="bg-white text-[#FF6B35] px-4 py-2 rounded-full font-medium hover:shadow-lg transition-all duration-300"
             >
               登録する

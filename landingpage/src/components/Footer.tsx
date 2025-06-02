@@ -85,9 +85,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
-              プロダクト
-            </h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">プロダクト</h3>
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
                 <li key={link.href}>
@@ -103,9 +101,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
-              会社情報
-            </h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">会社情報</h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -121,9 +117,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
-              法的情報
-            </h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">法的情報</h3>
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
@@ -142,13 +136,14 @@ export default function Footer() {
         {/* Newsletter */}
         <div className="border-t border-gray-200/50 dark:border-gray-800/50 pt-12 mb-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-2 gradient-text">
-              最新情報をお届け
-            </h3>
+            <h3 className="text-2xl font-bold mb-2 gradient-text">最新情報をお届け</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
               プロダクトアップデートや限定オファーをメールでお知らせします
             </p>
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form
+              onSubmit={handleSubscribe}
+              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+            >
               <input
                 type="email"
                 value={email}

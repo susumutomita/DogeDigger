@@ -8,9 +8,7 @@ export default function DemoSection() {
   return (
     <section id="demo" className="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
       <div className="max-w-6xl mx-auto">
-        <div
-          className="text-center mb-16 animate-fade-up"
-        >
+        <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             実際の<span className="gradient-text">体験</span>を見る
           </h2>
@@ -19,9 +17,7 @@ export default function DemoSection() {
           </p>
         </div>
 
-        <div
-          className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl animate-scale-in"
-        >
+        <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl animate-scale-in">
           {/* Video placeholder */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B35] to-[#4ECDC4] opacity-20" />
           <div className="absolute inset-0 flex items-center justify-center">
@@ -39,9 +35,7 @@ export default function DemoSection() {
                 </svg>
               </button>
             ) : (
-              <div className="text-white text-xl">
-                デモビデオ再生中...
-              </div>
+              <div className="text-white text-xl">デモビデオ再生中...</div>
             )}
           </div>
 
@@ -61,9 +55,7 @@ export default function DemoSection() {
         </div>
 
         {/* Key highlights */}
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           {[
             { emoji: '🐕', title: 'リアルタイム追跡', desc: 'ロボット犬の動きをARで可視化' },
             { emoji: '💎', title: '宝物発見', desc: 'ARマーカーで宝箱を表示' },
