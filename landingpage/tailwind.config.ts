@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -31,8 +31,8 @@ const config: Config = {
         'fade-up-delay-3': 'fadeUp 0.5s ease-out 0.3s both',
         'slide-up': 'slideUp 0.5s ease-out',
         'bounce-slow': 'bounce 2s infinite',
-        'fadeIn': 'fadeIn 0.5s ease-out',
-        'slideUp': 'slideUp 0.5s ease-out',
+        fadeIn: 'fadeIn 0.5s ease-out',
+        slideUp: 'slideUp 0.5s ease-out',
       },
       keyframes: {
         fadeUp: {
@@ -51,6 +51,6 @@ const config: Config = {
     },
   },
   plugins: [],
-}
+};
 
-export default config
+export default config;

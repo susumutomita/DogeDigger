@@ -1,41 +1,42 @@
-import type { Metadata } from "next";
-import { Inter, Noto_Sans_JP, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter, Noto_Sans_JP, JetBrains_Mono } from 'next/font/google';
+import './globals.css';
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
+  variable: '--font-inter',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 const notoSansJP = Noto_Sans_JP({
-  variable: "--font-noto-sans-jp",
-  subsets: ["latin"],
-  display: "swap",
+  variable: '--font-noto-sans-jp',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 const jetBrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  display: "swap",
+  variable: '--font-jetbrains-mono',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "DogeDigger - 犬も歩けばトークン掘れる",
-  description: "ロボット犬と一緒にAR宝探しをし、AI生成アートをNFTとして所有できる、新感覚のデジタル×フィジカル体験。",
-  keywords: ["NFT", "AR", "ロボット犬", "AI生成アート", "宝探し", "Web3"],
+  title: 'DogeDigger - 犬も歩けばトークン掘れる',
+  description:
+    'ロボット犬と一緒にAR宝探しをし、AI生成アートをNFTとして所有できる、新感覚のデジタル×フィジカル体験。',
+  keywords: ['NFT', 'AR', 'ロボット犬', 'AI生成アート', '宝探し', 'Web3'],
   openGraph: {
-    title: "DogeDigger - 犬も歩けばトークン掘れる",
-    description: "ロボット犬と一緒にAR宝探しをし、AI生成アートをNFTとして所有できる体験",
-    images: ["/og-image.png"],
-    locale: "ja_JP",
-    type: "website",
+    title: 'DogeDigger - 犬も歩けばトークン掘れる',
+    description: 'ロボット犬と一緒にAR宝探しをし、AI生成アートをNFTとして所有できる体験',
+    images: ['/og-image.png'],
+    locale: 'ja_JP',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "DogeDigger - 犬も歩けばトークン掘れる",
-    description: "ロボット犬と一緒にAR宝探しをし、AI生成アートをNFTとして所有できる体験",
-    images: ["/og-image.png"],
+    card: 'summary_large_image',
+    title: 'DogeDigger - 犬も歩けばトークン掘れる',
+    description: 'ロボット犬と一緒にAR宝探しをし、AI生成アートをNFTとして所有できる体験',
+    images: ['/og-image.png'],
   },
 };
 

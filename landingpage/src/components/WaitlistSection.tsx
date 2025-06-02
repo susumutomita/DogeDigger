@@ -65,31 +65,31 @@ export default function WaitlistSection() {
 
     // TODO: Implement actual form submission
     console.log('Form data:', formData);
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     setSubmitted(true);
     setIsSubmitting(false);
   };
 
   const handleInterestChange = (interestId: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       interests: prev.interests.includes(interestId)
-        ? prev.interests.filter(id => id !== interestId)
+        ? prev.interests.filter((id) => id !== interestId)
         : [...prev.interests, interestId],
     }));
     // Clear error when user selects an interest
     if (errors.interests) {
-      setErrors(prev => ({ ...prev, interests: undefined }));
+      setErrors((prev) => ({ ...prev, interests: undefined }));
     }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
     // Clear error when user types
     if (errors[name as keyof FormData]) {
-      setErrors(prev => ({ ...prev, [name]: undefined }));
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
   };
 
@@ -140,7 +140,10 @@ export default function WaitlistSection() {
               { icon: '💸', text: '初回利用50%OFF' },
               { icon: '👑', text: 'VIPコミュニティ招待' },
             ].map((item, index) => (
-              <div key={index} className="flex items-center justify-center space-x-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+              <div
+                key={index}
+                className="flex items-center justify-center space-x-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm"
+              >
                 <span className="text-2xl">{item.icon}</span>
                 <span className="font-medium">{item.text}</span>
               </div>
@@ -149,7 +152,10 @@ export default function WaitlistSection() {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
+        >
           {/* Email */}
           <div className="mb-6">
             <label htmlFor="email" className="block text-sm font-medium mb-2">
@@ -164,9 +170,7 @@ export default function WaitlistSection() {
               className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent dark:bg-gray-700"
               placeholder="your@email.com"
             />
-            {errors.email && (
-              <p className="mt-1 text-sm text-red-500">{errors.email}</p>
-            )}
+            {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
           </div>
 
           {/* Name */}
@@ -187,9 +191,7 @@ export default function WaitlistSection() {
 
           {/* Interests */}
           <div className="mb-6">
-            <label className="block text-sm font-medium mb-2">
-              興味のある機能（複数選択可）
-            </label>
+            <label className="block text-sm font-medium mb-2">興味のある機能（複数選択可）</label>
             <div className="space-y-2">
               {interests.map((interest) => (
                 <label key={interest.id} className="flex items-center cursor-pointer">
@@ -203,9 +205,7 @@ export default function WaitlistSection() {
                 </label>
               ))}
             </div>
-            {errors.interests && (
-              <p className="mt-1 text-sm text-red-500">{errors.interests[0]}</p>
-            )}
+            {errors.interests && <p className="mt-1 text-sm text-red-500">{errors.interests[0]}</p>}
           </div>
 
           {/* Source */}
@@ -252,4 +252,3 @@ export default function WaitlistSection() {
     </section>
   );
 }
-
