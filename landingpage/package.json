@@ -14,8 +14,10 @@
   "dependencies": {
     "@hookform/resolvers": "^3.3.0",
     "@supabase/supabase-js": "^2.49.9",
+    "@types/jsonwebtoken": "^9.0.9",
     "clsx": "^2.1.0",
     "framer-motion": "^11.18.2",
+    "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.400.0",
     "next": "15.3.3",
     "next-intl": "^4.1.0",
