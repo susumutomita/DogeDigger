@@ -98,7 +98,7 @@ export default function PricingSection() {
                 onChange={(e) => setSelectedTeamSize(parseInt(e.target.value))}
                 className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
                 style={{
-                  background: `linear-gradient(to right, #FF6B35 0%, #FF6B35 ${(selectedTeamSize - 1) * 5}%, #e5e7eb ${(selectedTeamSize - 1) * 5}%, #e5e7eb 100%)`,
+                  background: `linear-gradient(to right, #2563eb 0%, #2563eb ${(selectedTeamSize - 1) * 5}%, #e5e7eb ${(selectedTeamSize - 1) * 5}%, #e5e7eb 100%)`,
                 }}
               />
               <div className="flex justify-between text-xs text-gray-500 mt-2">

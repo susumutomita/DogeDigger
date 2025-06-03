@@ -1,0 +1,141 @@
+{
+  "navigation": {
+    "features": "Features",
+    "demo": "Demo",
+    "pricing": "Pricing",
+    "team": "Team",
+    "early_access": "Early Access"
+  },
+  "hero": {
+    "title_1": "Every Step",
+    "title_2": "Finds Treasure",
+    "subtitle": "Walk and discover hidden treasures.",
+    "description": "Experience AR treasure hunting with robotic dogs and own AI-generated art as NFTs in this groundbreaking digital-physical experience.",
+    "cta_primary": "Join Early Access",
+    "cta_secondary": "Watch Demo"
+  },
+  "features": {
+    "title": "Three Revolutionary Technologies Combined",
+    "subtitle": "Future treasure hunting experience powered by Robotics × AR × Blockchain",
+    "robot": {
+      "title": "Adventure with Robot Dogs",
+      "description": "State-of-the-art robot dogs map the real world while embarking on treasure hunting adventures with you",
+      "details": "Built-in sensors and cameras scan surroundings, syncing reality with digital using Unity's AR mapping technology"
+    },
+    "ar": {
+      "title": "AR Treasure Hunt Experience",
+      "description": "Discover hidden treasure chests in real space through smartphones or Meta Quest 3",
+      "details": "Parks and event venues become adventure stages. New outdoor content to enjoy with family and friends"
+    },
+    "ai": {
+      "title": "AI-Generated Art",
+      "description": "Generate one-of-a-kind artwork based on location features",
+      "details": "Generate text prompts based on terrain and landmarks, creating high-quality images in the cloud"
+    },
+    "nft": {
+      "title": "Permanent Storage as NFTs",
+      "description": "Generated art is instantly minted as NFTs",
+      "details": "Smart contracts on Base chain allow on-the-spot minting. Can be resold or traded later"
+    },
+    "learn_more": "Learn More"
+  },
+  "demo": {
+    "title": "See the Real Experience",
+    "subtitle": "Watch AR treasure hunting with robot dogs in action",
+    "video_title": "DogeDigger Demo Video"
+  },
+  "pricing": {
+    "title": "Simple Pricing Plans",
+    "subtitle": "Choose from three plans that fit your needs",
+    "team_size": "Team Size",
+    "billing_cycle": "Billing Cycle",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "discount": "20% OFF",
+    "guarantee": "All plans come with a 30-day money-back guarantee",
+    "plans": {
+      "basic": {
+        "name": "Trial Plan",
+        "description": "Perfect for first-time users",
+        "features": [
+          "1 treasure hunt experience",
+          "1 AI-generated artwork",
+          "NFT minting",
+          "Basic support"
+        ]
+      },
+      "premium": {
+        "name": "Premium Plan",
+        "description": "Most popular plan",
+        "features": [
+          "5 treasure hunts per month",
+          "5 AI-generated artworks",
+          "Unlimited NFT minting",
+          "Priority support",
+          "Exclusive event invitations",
+          "Robot dog customization"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For events and businesses",
+        "features": [
+          "Unlimited experiences",
+          "Custom AI models",
+          "Dedicated robot dogs",
+          "24/7 support",
+          "API access",
+          "White-label support"
+        ]
+      }
+    },
+    "cta": "Get Started",
+    "contact": "Contact Us",
+    "per_month": "/month",
+    "per_person": "per person",
+    "per_session": "/session",
+    "yearly_discount": "Yearly ¥{amount} (20% discount applied)"
+  },
+  "waitlist": {
+    "title": "Join Early Access",
+    "subtitle": "Get exclusive benefits before product launch",
+    "incentives": {
+      "early_access": "Early Access Rights",
+      "nft_airdrop": "Exclusive NFT Airdrop",
+      "discount": "50% OFF First Use",
+      "vip_community": "VIP Community Invitation"
+    },
+    "form": {
+      "email": "Email Address",
+      "email_placeholder": "your@email.com",
+      "name": "Name (Optional)",
+      "name_placeholder": "John Doe",
+      "interests": "Interested Features (Multiple Selection)",
+      "source": "How did you hear about us?",
+      "submit": "Join Early Access",
+      "submitting": "Submitting...",
+      "privacy": "By registering, you agree to our Terms of Service and Privacy Policy."
+    },
+    "success": {
+      "title": "Thank you for registering!",
+      "message": "We'll notify you by email once early access is ready."
+    },
+    "social_proof": "{count} people already registered"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Get product updates and exclusive offers via email",
+      "submit": "Subscribe",
+      "success": "✓ Subscribed"
+    },
+    "links": {
+      "product": "Product",
+      "company": "Company",
+      "legal": "Legal"
+    },
+    "status": "All systems operational",
+    "copyright": "© 2025 DogeDigger. All rights reserved.",
+    "made_with": "Made with 🐕 by the DogeDigger team"
+  }
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface FormData {
   email: string;
@@ -19,6 +19,21 @@ export default function WaitlistSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
+  const [totalRegistrations, setTotalRegistrations] = useState(1234); // デフォルト値
+
+  // 登録者数を取得
+  useEffect(() => {
+    fetch('/api/waitlist')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.totalRegistrations) {
+          setTotalRegistrations(data.totalRegistrations);
+        }
+      })
+      .catch((error) => {
+        console.error('Failed to fetch registration count:', error);
+      });
+  }, []);
 
   const interests = [
     { id: 'robot-walk', label: 'ロボット犬との散歩体験' },
@@ -63,12 +78,44 @@ export default function WaitlistSection() {
 
     setIsSubmitting(true);
 
-    // TODO: Implement actual form submission
-    console.log('Form data:', formData);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setSubmitted(true);
-    setIsSubmitting(false);
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'エラーが発生しました');
+      }
+
+      setSubmitted(true);
+
+      // 成功時の処理
+      console.log('Registration successful:', data);
+
+      // フォームをリセット
+      setFormData({
+        email: '',
+        name: '',
+        interests: [],
+        source: '',
+      });
+    } catch (error) {
+      console.error('Registration error:', error);
+      setErrors({
+        email:
+          error instanceof Error
+            ? error.message
+            : '登録中にエラーが発生しました。もう一度お試しください。',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInterestChange = (interestId: string) => {
@@ -245,7 +292,10 @@ export default function WaitlistSection() {
         {/* Social Proof */}
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            <span className="font-bold text-[#FF6B35]">1,234人</span>が既に登録済み
+            <span className="font-bold text-[#FF6B35]">
+              {totalRegistrations.toLocaleString()}人
+            </span>
+            が既に登録済み
           </p>
         </div>
       </div>
