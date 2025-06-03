@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import { useTranslationContext } from '@/context/TranslationContext';
+import TitleWithGradient from './TitleWithGradient';
 
 const basePlans = [
   {
@@ -60,9 +61,10 @@ export default function PricingSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2
+          <TitleWithGradient
+            text={t('pricing.title')}
+            gradientText={t('pricing.title_gradient')}
             className="text-4xl md:text-5xl font-bold mb-4"
-            dangerouslySetInnerHTML={{ __html: t('pricing.title') }}
           />
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             {t('pricing.subtitle')}

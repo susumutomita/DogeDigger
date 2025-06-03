@@ -15,7 +15,8 @@
     "cta_secondary": "Watch Demo"
   },
   "features": {
-    "title": "Three <span class=\"gradient-text\">Revolutionary Technologies</span> Combined",
+    "title": "Three {gradient} Combined",
+    "title_gradient": "Revolutionary Technologies",
     "subtitle": "Future treasure hunting experience powered by Robotics × AR × Blockchain",
     "robot": {
       "title": "Adventure with Robot Dogs",
@@ -49,7 +50,8 @@
     "flow_step4": "Get NFT!"
   },
   "demo": {
-    "title": "See the Real <span class=\"gradient-text\">Experience</span>",
+    "title": "See the Real {gradient}",
+    "title_gradient": "Experience",
     "subtitle": "Watch AR treasure hunting with robot dogs in action",
     "video_title": "DogeDigger Demo Video",
     "realtime_tracking": "Real-time Tracking",
@@ -60,7 +62,8 @@
     "nft_desc": "Generate and mint art on the spot"
   },
   "pricing": {
-    "title": "Simple <span class=\"gradient-text\">Pricing Plans</span>",
+    "title": "Simple {gradient}",
+    "title_gradient": "Pricing Plans",
     "subtitle": "Choose from three plans that fit your needs",
     "recommended": "Recommended",
     "tbd": "TBD",

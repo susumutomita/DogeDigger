@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslationContext } from '@/context/TranslationContext';
+import TitleWithGradient from './TitleWithGradient';
 
 const features = [
   {
@@ -61,9 +62,10 @@ export default function FeaturesSection() {
     <section id="features" className="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2
+          <TitleWithGradient
+            text={t('features.title')}
+            gradientText={t('features.title_gradient')}
             className="text-4xl md:text-5xl font-bold mb-4"
-            dangerouslySetInnerHTML={{ __html: t('features.title') }}
           />
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             {t('features.subtitle')}
@@ -92,11 +94,9 @@ export default function FeaturesSection() {
                   <div className="h-full flex flex-col justify-center items-center text-center">
                     <div className="space-y-4">
                       <div className="text-5xl mb-4">🚀</div>
-                      <h3 className="text-xl font-bold">革新的体験</h3>
+                      <h3 className="text-xl font-bold">{t('features.innovation.title')}</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        ロボティクス×AR×ブロックチェーンが融合した
-                        <br />
-                        次世代エンターテインメント
+                        {t('features.innovation.description')}
                       </p>
                     </div>
                   </div>

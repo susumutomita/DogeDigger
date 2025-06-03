@@ -15,7 +15,8 @@
     "cta_secondary": "デモを見る"
   },
   "features": {
-    "title": "3つの<span class=\"gradient-text\">革新的技術</span>が融合",
+    "title": "3つの{gradient}が融合",
+    "title_gradient": "革新的技術",
     "subtitle": "ロボティクス × AR × ブロックチェーンで実現する、未来の宝探し体験",
     "robot": {
       "title": "ロボット犬と冒険",
@@ -49,7 +50,8 @@
     "flow_step4": "NFTゲット！"
   },
   "demo": {
-    "title": "実際の<span class=\"gradient-text\">体験</span>を見る",
+    "title": "実際の{gradient}を見る",
+    "title_gradient": "体験",
     "subtitle": "ロボット犬と一緒にAR宝探しをする様子をご覧ください",
     "video_title": "DogeDigger デモビデオ",
     "realtime_tracking": "リアルタイム追跡",
@@ -60,7 +62,8 @@
     "nft_desc": "その場でアートを生成・ミント"
   },
   "pricing": {
-    "title": "シンプルな<span class=\"gradient-text\">料金プラン</span>",
+    "title": "シンプルな{gradient}",
+    "title_gradient": "料金プラン",
     "subtitle": "あなたのニーズに合わせて選べる3つのプラン",
     "recommended": "おすすめ",
     "tbd": "TBD",

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useTranslationContext } from '@/context/TranslationContext';
+import TitleWithGradient from './TitleWithGradient';
 
 export default function DemoSection() {
   const [showVideo, setShowVideo] = useState(false);
@@ -12,9 +13,10 @@ export default function DemoSection() {
     <section id="demo" className="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-up">
-          <h2
+          <TitleWithGradient
+            text={t('demo.title')}
+            gradientText={t('demo.title_gradient')}
             className="text-4xl md:text-5xl font-bold mb-4"
-            dangerouslySetInnerHTML={{ __html: t('demo.title') }}
           />
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             {t('demo.subtitle')}
