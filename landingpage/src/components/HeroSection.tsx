@@ -94,9 +94,16 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-up-delay-3">
             <button
               className="px-8 py-4 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-bold rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95"
-              onClick={() =>
-                document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
-              }
+              onClick={() => {
+                console.log('Hero CTA button clicked');
+                const waitlistElement = document.getElementById('waitlist');
+                console.log('Waitlist element found:', waitlistElement);
+                if (waitlistElement) {
+                  waitlistElement.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  console.error('Waitlist element not found');
+                }
+              }}
             >
               {t('hero.cta_primary')}
             </button>

@@ -20,25 +20,26 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000); // Reduced from 2000ms to 1000ms for faster testing
 
     return () => clearTimeout(timer);
   }, []);
 
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
-    <>
-      {isLoading && <LoadingScreen />}
-      <div className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        <Navigation />
-        <main>
-          <HeroSection />
-          <WaitlistSection />
-          <FeaturesSection />
-          <DemoSection />
-          <PricingSection />
-        </main>
-        <Footer />
-      </div>
-    </>
+    <div className="transition-opacity duration-500 opacity-100">
+      <Navigation />
+      <main>
+        <HeroSection />
+        <WaitlistSection />
+        <FeaturesSection />
+        <DemoSection />
+        <PricingSection />
+      </main>
+      <Footer />
+    </div>
   );
 }

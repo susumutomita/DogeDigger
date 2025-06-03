@@ -84,9 +84,16 @@ export default function Navigation() {
               ))}
               <LanguageSwitcher currentLocale={locale} onLocaleChange={setLocale} />
               <button
-                onClick={() =>
-                  document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
-                }
+                onClick={() => {
+                  console.log('Desktop early access button clicked');
+                  const waitlistElement = document.getElementById('waitlist');
+                  console.log('Waitlist element found:', waitlistElement);
+                  if (waitlistElement) {
+                    waitlistElement.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    console.error('Waitlist element not found');
+                  }
+                }}
                 className="px-6 py-2 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-medium rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[#FF6B35]/25"
               >
                 {t('navigation.early_access')}
@@ -127,7 +134,20 @@ export default function Navigation() {
                 {item.label}
               </Link>
             ))}
-            <button className="w-full px-6 py-2 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-medium rounded-full hover:shadow-lg transition-all duration-300">
+            <button
+              onClick={() => {
+                console.log('Mobile early access button clicked');
+                const waitlistElement = document.getElementById('waitlist');
+                console.log('Waitlist element found:', waitlistElement);
+                if (waitlistElement) {
+                  waitlistElement.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  console.error('Waitlist element not found');
+                }
+                setIsMobileMenuOpen(false);
+              }}
+              className="w-full px-6 py-2 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-medium rounded-full hover:shadow-lg transition-all duration-300"
+            >
               {t('navigation.early_access')}
             </button>
           </div>
@@ -147,9 +167,16 @@ export default function Navigation() {
               </p>
             </div>
             <button
-              onClick={() =>
-                document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
-              }
+              onClick={() => {
+                console.log('Floating banner button clicked');
+                const waitlistElement = document.getElementById('waitlist');
+                console.log('Waitlist element found:', waitlistElement);
+                if (waitlistElement) {
+                  waitlistElement.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  console.error('Waitlist element not found');
+                }
+              }}
               className="bg-white text-[#FF6B35] px-4 py-2 rounded-full font-medium hover:shadow-lg transition-all duration-300"
             >
               {locale === 'ja' ? '登録する' : 'Sign Up'}
