@@ -90,19 +90,25 @@ export default function PricingSection() {
                 </div>
               )}
 
-              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">{plan.description}</p>
+              <h3 className="text-2xl font-bold mb-2">{t(`pricing.plans.${plan.id}.name`)}</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                {t(`pricing.plans.${plan.id}.description`)}
+              </p>
 
               <div className="mb-6">
-                <span className="text-3xl font-bold text-gray-600 dark:text-gray-400">TBD</span>
-                <p className="text-sm text-gray-500 mt-1">価格は近日発表予定</p>
+                <span className="text-3xl font-bold text-gray-600 dark:text-gray-400">
+                  {t('pricing.tbd')}
+                </span>
+                <p className="text-sm text-gray-500 mt-1">{t('pricing.tbd_description')}</p>
               </div>
 
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
                     <Check className="w-5 h-5 text-[#4ECDC4] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">{feature}</span>
+                    <span className="text-sm">
+                      {t(`pricing.plans.${plan.id}.features.${featureIndex}`)}
+                    </span>
                   </li>
                 ))}
               </ul>

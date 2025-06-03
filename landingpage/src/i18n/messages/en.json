@@ -152,6 +152,30 @@
       "company": "Company",
       "legal": "Legal"
     },
+    "product_links": {
+      "features": "Features",
+      "demo": "Demo",
+      "pricing": "Pricing",
+      "roadmap": "Roadmap"
+    },
+    "company_links": {
+      "team": "Team",
+      "blog": "Blog",
+      "contact": "Contact",
+      "press": "Press Kit"
+    },
+    "legal_links": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "legal": "Legal Notice"
+    },
+    "social_links": {
+      "twitter": "Twitter",
+      "discord": "Discord",
+      "github": "GitHub"
+    },
+    "tagline": "Every Step Finds Treasure",
+    "description": "Revolutionary treasure hunting experience powered by Robot Dogs × AR × NFT",
     "status": "All systems operational",
     "copyright": "© 2025 DogeDigger. All rights reserved.",
     "made_with": "Made with 🐕 by the DogeDigger team"

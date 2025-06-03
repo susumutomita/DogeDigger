@@ -147,6 +147,30 @@
       "company": "会社情報",
       "legal": "法的情報"
     },
+    "product_links": {
+      "features": "特徴",
+      "demo": "デモ",
+      "pricing": "料金",
+      "roadmap": "ロードマップ"
+    },
+    "company_links": {
+      "team": "チーム",
+      "blog": "ブログ",
+      "contact": "お問い合わせ",
+      "press": "プレスキット"
+    },
+    "legal_links": {
+      "terms": "利用規約",
+      "privacy": "プライバシーポリシー",
+      "legal": "特定商取引法"
+    },
+    "social_links": {
+      "twitter": "Twitter",
+      "discord": "Discord",
+      "github": "GitHub"
+    },
+    "tagline": "犬も歩けばトークン掘れる",
+    "description": "ロボット犬×AR×NFTで実現する、新感覚の宝探し体験",
     "status": "All systems operational",
     "copyright": "© 2025 DogeDigger. All rights reserved.",
     "made_with": "Made with 🐕 by the DogeDigger team"

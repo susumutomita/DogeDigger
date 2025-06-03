@@ -4,10 +4,15 @@ import { useState, useEffect } from 'react';
 import { type Locale, defaultLocale } from '@/i18n/config';
 
 type Messages = {
-  [key: string]: any;
+  [key: string]: string | Messages;
 };
 
-export function useTranslation(initialLocale?: Locale) {
+export function useTranslation(initialLocale?: Locale): {
+  locale: Locale;
+  setLocale: (locale: Locale) => void;
+  t: (key: string, params?: Record<string, string | number>) => string;
+  isLoading: boolean;
+} {
   const [locale, setLocale] = useState<Locale>(initialLocale || defaultLocale);
   const [messages, setMessages] = useState<Messages>({});
   const [isLoading, setIsLoading] = useState(true);
@@ -33,9 +38,9 @@ export function useTranslation(initialLocale?: Locale) {
     loadMessages();
   }, [locale]);
 
-  const t = (key: string, params?: Record<string, string | number>) => {
+  const t = (key: string, params?: Record<string, string | number>): string => {
     const keys = key.split('.');
-    let value = messages;
+    let value: string | Messages = messages;
 
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
@@ -55,7 +60,7 @@ export function useTranslation(initialLocale?: Locale) {
     if (params) {
       return Object.entries(params).reduce((text, [param, val]) => {
         return text.replace(new RegExp(`\\{${param}\\}`, 'g'), String(val));
-      }, value);
+      }, value as string);
     }
 
     return value;
