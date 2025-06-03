@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 
@@ -49,20 +48,6 @@ const basePlans = [
 ];
 
 export default function PricingSection() {
-  const [selectedTeamSize, setSelectedTeamSize] = useState(1);
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-
-  // 年間割引率
-  const yearlyDiscount = 0.2; // 20% off
-
-  const calculatePrice = (basePrice: number | null, teamSize: number, isYearly: boolean) => {
-    if (basePrice === null) return null;
-    let price = basePrice * teamSize;
-    if (isYearly) {
-      price = price * 12 * (1 - yearlyDiscount);
-    }
-    return price;
-  };
 
   return (
     <section id="pricing" className="py-20 px-4">
@@ -82,72 +67,9 @@ export default function PricingSection() {
           </p>
         </motion.div>
 
-        {/* Pricing Calculator */}
-        <div className="mb-12 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-2xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Team Size Slider */}
-            <div>
-              <label className="block text-sm font-medium mb-4">
-                利用人数: <span className="text-[#FF6B35] font-bold">{selectedTeamSize}人</span>
-              </label>
-              <input
-                type="range"
-                min="1"
-                max="20"
-                value={selectedTeamSize}
-                onChange={(e) => setSelectedTeamSize(parseInt(e.target.value))}
-                className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
-                style={{
-                  background: `linear-gradient(to right, #2563eb 0%, #2563eb ${(selectedTeamSize - 1) * 5}%, #e5e7eb ${(selectedTeamSize - 1) * 5}%, #e5e7eb 100%)`,
-                }}
-              />
-              <div className="flex justify-between text-xs text-gray-500 mt-2">
-                <span>1人</span>
-                <span>10人</span>
-                <span>20人</span>
-              </div>
-            </div>
-
-            {/* Billing Cycle Toggle */}
-            <div className="flex flex-col items-center md:items-end">
-              <label className="block text-sm font-medium mb-4">支払いサイクル</label>
-              <div className="flex items-center bg-gray-200 dark:bg-gray-700 rounded-full p-1">
-                <button
-                  onClick={() => setBillingCycle('monthly')}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                    billingCycle === 'monthly' ? 'bg-white dark:bg-gray-900 shadow-md' : ''
-                  }`}
-                >
-                  月額
-                </button>
-                <button
-                  onClick={() => setBillingCycle('yearly')}
-                  className={`px-6 py-2 rounded-full transition-all duration-300 relative ${
-                    billingCycle === 'yearly' ? 'bg-white dark:bg-gray-900 shadow-md' : ''
-                  }`}
-                >
-                  年額
-                  <span className="absolute -top-8 right-0 bg-[#4ECDC4] text-white text-xs px-2 py-1 rounded-full">
-                    20% OFF
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {basePlans.map((plan, index) => {
-            const price = calculatePrice(
-              plan.basePrice,
-              selectedTeamSize,
-              billingCycle === 'yearly'
-            );
-            const displayPrice = price
-              ? Math.floor(price / (billingCycle === 'yearly' ? 12 : 1))
-              : null;
-
-            return (
+          {basePlans.map((plan, index) => (
               <motion.div
                 key={plan.id}
                 className={`relative bg-white dark:bg-gray-800 rounded-2xl p-8 ${
@@ -194,11 +116,10 @@ export default function PricingSection() {
                       : 'border-2 border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35] hover:text-white'
                   }`}
                 >
-                  {plan.basePrice === null ? 'お問い合わせ' : '今すぐ始める'}
+                  ウェイトリストに登録
                 </button>
               </motion.div>
-            );
-          })}
+          ))}
         </div>
 
         {/* FAQ or additional info */}
