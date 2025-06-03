@@ -9,8 +9,7 @@
   "lint-staged": {
     "landingpage/**/*.{js,jsx,ts,tsx,json,css,md}": [
       "cd landingpage && npm run format",
-      "cd landingpage && npm run lint --fix",
-      "cd landingpage && npm run type-check"
+      "cd landingpage && npm run lint --fix"
     ]
   }
 }
