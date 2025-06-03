@@ -2,11 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import LanguageSwitcher from './LanguageSwitcher';
+import { type Locale } from '@/i18n/config';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [currentLocale, setCurrentLocale] = useState<Locale>('ja');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,6 +82,7 @@ export default function Navigation() {
                   )}
                 </Link>
               ))}
+              <LanguageSwitcher currentLocale={currentLocale} onLocaleChange={setCurrentLocale} />
               <button
                 onClick={() =>
                   document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
@@ -135,8 +139,8 @@ export default function Navigation() {
         <div className="bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white p-4 rounded-lg shadow-2xl">
           <div className="flex items-center justify-between space-x-4">
             <div>
-              <p className="font-bold">🎉 限定オファー</p>
-              <p className="text-sm">今なら早期登録で50%OFF！</p>
+              <p className="font-bold">🐕 早期アクセス</p>
+              <p className="text-sm">限定特典付きで事前登録受付中</p>
             </div>
             <button
               onClick={() =>

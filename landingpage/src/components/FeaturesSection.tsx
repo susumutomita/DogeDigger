@@ -41,9 +41,9 @@ const features = [
     bgColor: 'from-[#FF6B35]/10 to-[#4ECDC4]/10',
   },
   {
-    id: 'stats',
-    icon: '📊',
-    title: '実績データ',
+    id: 'innovation',
+    icon: '🚀',
+    title: '革新的体験',
     description: '',
     details: '',
     gridClass: 'md:col-span-1 md:row-span-1',
@@ -84,22 +84,17 @@ export default function FeaturesSection() {
 
               {/* Content */}
               <div className="relative z-10 h-full flex flex-col">
-                {feature.isStats ? (
-                  // Stats Card
+                {feature.id === 'innovation' ? (
+                  // Innovation Card
                   <div className="h-full flex flex-col justify-center items-center text-center">
                     <div className="space-y-4">
-                      <div>
-                        <p className="text-3xl font-bold gradient-text">1,000+</p>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">NFT生成済み</p>
-                      </div>
-                      <div>
-                        <p className="text-3xl font-bold gradient-text">50+</p>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">イベント開催</p>
-                      </div>
-                      <div>
-                        <p className="text-3xl font-bold gradient-text">98%</p>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">満足度</p>
-                      </div>
+                      <div className="text-5xl mb-4">🚀</div>
+                      <h3 className="text-xl font-bold">革新的体験</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        ロボティクス×AR×ブロックチェーンが融合した
+                        <br />
+                        次世代エンターテインメント
+                      </p>
                     </div>
                   </div>
                 ) : (

@@ -19,7 +19,7 @@ export default function WaitlistSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
-  const [totalRegistrations, setTotalRegistrations] = useState(1234); // デフォルト値
+  const [totalRegistrations, setTotalRegistrations] = useState(0); // デフォルト値
 
   // 登録者数を取得
   useEffect(() => {
@@ -183,9 +183,9 @@ export default function WaitlistSection() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
             {[
               { icon: '🎯', text: '早期アクセス権' },
-              { icon: '🎁', text: '限定NFTエアドロップ' },
-              { icon: '💸', text: '初回利用50%OFF' },
-              { icon: '👑', text: 'VIPコミュニティ招待' },
+              { icon: '🎁', text: '特典コンテンツ' },
+              { icon: '📧', text: '最新情報をお届け' },
+              { icon: '🤝', text: 'コミュニティ参加' },
             ].map((item, index) => (
               <div
                 key={index}
