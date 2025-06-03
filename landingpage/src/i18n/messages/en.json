@@ -47,6 +47,8 @@
   "pricing": {
     "title": "Simple Pricing Plans",
     "subtitle": "Choose from three plans that fit your needs",
+    "tbd": "TBD",
+    "tbd_description": "Pricing will be announced soon",
     "team_size": "Team Size",
     "billing_cycle": "Billing Cycle",
     "monthly": "Monthly",
@@ -89,7 +91,7 @@
         ]
       }
     },
-    "cta": "Get Started",
+    "cta": "Join Waitlist",
     "contact": "Contact Us",
     "per_month": "/month",
     "per_person": "per person",

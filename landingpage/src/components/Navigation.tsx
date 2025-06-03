@@ -3,13 +3,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import LanguageSwitcher from './LanguageSwitcher';
-import { type Locale } from '@/i18n/config';
+import { useTranslationContext } from '@/context/TranslationContext';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
-  const [currentLocale, setCurrentLocale] = useState<Locale>('ja');
+  const { locale, setLocale, t } = useTranslationContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,10 +37,10 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { href: '#features', label: '特徴' },
-    { href: '#demo', label: 'デモ' },
-    { href: '#pricing', label: '料金' },
-    { href: '#team', label: 'チーム' },
+    { href: '#features', label: t('navigation.features') },
+    { href: '#demo', label: t('navigation.demo') },
+    { href: '#pricing', label: t('navigation.pricing') },
+    { href: '#team', label: t('navigation.team') },
   ];
 
   return (
@@ -82,14 +82,14 @@ export default function Navigation() {
                   )}
                 </Link>
               ))}
-              <LanguageSwitcher currentLocale={currentLocale} onLocaleChange={setCurrentLocale} />
+              <LanguageSwitcher currentLocale={locale} onLocaleChange={setLocale} />
               <button
                 onClick={() =>
                   document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
                 }
                 className="px-6 py-2 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-medium rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[#FF6B35]/25"
               >
-                早期アクセス
+                {t('navigation.early_access')}
               </button>
             </div>
 
@@ -128,7 +128,7 @@ export default function Navigation() {
               </Link>
             ))}
             <button className="w-full px-6 py-2 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-medium rounded-full hover:shadow-lg transition-all duration-300">
-              早期アクセス
+              {t('navigation.early_access')}
             </button>
           </div>
         </div>
@@ -139,8 +139,12 @@ export default function Navigation() {
         <div className="bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white p-4 rounded-lg shadow-2xl">
           <div className="flex items-center justify-between space-x-4">
             <div>
-              <p className="font-bold">🐕 早期アクセス</p>
-              <p className="text-sm">限定特典付きで事前登録受付中</p>
+              <p className="font-bold">🐕 {t('navigation.early_access')}</p>
+              <p className="text-sm">
+                {locale === 'ja'
+                  ? '限定特典付きで事前登録受付中'
+                  : 'Join early access with exclusive benefits'}
+              </p>
             </div>
             <button
               onClick={() =>
@@ -148,7 +152,7 @@ export default function Navigation() {
               }
               className="bg-white text-[#FF6B35] px-4 py-2 rounded-full font-medium hover:shadow-lg transition-all duration-300"
             >
-              登録する
+              {locale === 'ja' ? '登録する' : 'Sign Up'}
             </button>
           </div>
         </div>

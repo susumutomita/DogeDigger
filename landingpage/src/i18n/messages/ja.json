@@ -47,6 +47,8 @@
   "pricing": {
     "title": "シンプルな料金プラン",
     "subtitle": "あなたのニーズに合わせて選べる3つのプラン",
+    "tbd": "TBD",
+    "tbd_description": "価格は近日発表予定",
     "team_size": "利用人数",
     "billing_cycle": "支払いサイクル",
     "monthly": "月額",
@@ -84,7 +86,7 @@
         ]
       }
     },
-    "cta": "今すぐ始める",
+    "cta": "ウェイトリストに登録",
     "contact": "お問い合わせ",
     "per_month": "/月",
     "per_person": "1人あたり",

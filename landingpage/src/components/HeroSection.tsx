@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslationContext } from '@/context/TranslationContext';
 
 interface Particle {
   id: number;
@@ -13,6 +14,7 @@ interface Particle {
 export default function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [particles, setParticles] = useState<Particle[]>([]);
+  const { t } = useTranslationContext();
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -74,20 +76,18 @@ export default function HeroSection() {
         <div className="max-w-6xl mx-auto animate-fadeIn">
           {/* Main title */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-slideUp">
-            <span className="block mb-2">犬も歩けば</span>
-            <span className="gradient-text">トークン掘れる</span>
+            <span className="block mb-2">{t('hero.title_1')}</span>
+            <span className="gradient-text">{t('hero.title_2')}</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-gray-600 dark:text-gray-300 animate-fade-up-delay-1">
-            歩けば宝物が見つかる。
+            {t('hero.subtitle')}
           </p>
 
           {/* Description */}
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-up-delay-2">
-            ロボット犬と一緒にAR宝探しをし、AI生成アートをNFTとして所有できる、
-            <br className="hidden md:block" />
-            新感覚のデジタル×フィジカル体験。
+            {t('hero.description')}
           </p>
 
           {/* CTA Buttons */}
@@ -98,7 +98,7 @@ export default function HeroSection() {
                 document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
               }
             >
-              早期アクセスに登録
+              {t('hero.cta_primary')}
             </button>
             <button
               className="px-8 py-4 border-2 border-[#FF6B35] text-[#FF6B35] font-bold rounded-full hover:bg-[#FF6B35] hover:text-white transition-all duration-300 hover:scale-105 active:scale-95"
@@ -106,7 +106,7 @@ export default function HeroSection() {
                 document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })
               }
             >
-              デモを見る
+              {t('hero.cta_secondary')}
             </button>
           </div>
 
