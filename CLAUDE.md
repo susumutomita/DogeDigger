@@ -8,6 +8,10 @@
 
 ランディングページはNext JS 14 (App Router)を使いVercelにデプロイします。
 
+### やってはいけないこと
+
+- git commitとかgit pushなどのgit操作はしないこと
+
 ### 開発環境・ツール
 
 - **言語**: TypeScript (strict mode有効)
