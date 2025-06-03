@@ -28,14 +28,14 @@ export async function POST(request: NextRequest) {
 
     // JWTトークンを生成
     const token = jwt.sign(
-      { 
+      {
         username,
         isAdmin: true,
         iat: Math.floor(Date.now() / 1000),
       },
       JWT_SECRET,
-      { 
-        expiresIn: '24h' // 24時間有効
+      {
+        expiresIn: '24h', // 24時間有効
       }
     );
 
@@ -46,9 +46,6 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error('Admin login error:', error);
-    return NextResponse.json(
-      { error: 'サーバーエラーが発生しました' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'サーバーエラーが発生しました' }, { status: 500 });
   }
 }

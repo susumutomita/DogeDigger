@@ -18,10 +18,7 @@ export async function POST(request: NextRequest) {
     const decoded = jwt.verify(token, JWT_SECRET) as jwt.JwtPayload;
 
     if (!decoded.isAdmin) {
-      return NextResponse.json(
-        { error: '管理者権限がありません', valid: false },
-        { status: 403 }
-      );
+      return NextResponse.json({ error: '管理者権限がありません', valid: false }, { status: 403 });
     }
 
     return NextResponse.json({
@@ -38,10 +35,7 @@ export async function POST(request: NextRequest) {
         { status: 401 }
       );
     } else if (error instanceof jwt.JsonWebTokenError) {
-      return NextResponse.json(
-        { error: '無効なトークンです', valid: false },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: '無効なトークンです', valid: false }, { status: 401 });
     }
 
     console.error('Token verification error:', error);

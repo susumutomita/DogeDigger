@@ -49,12 +49,8 @@ export default function AdminLoginPage() {
             <span className="text-white font-bold text-2xl">🐕</span>
           </div>
         </div>
-        <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
-          DogeDigger 管理画面
-        </h2>
-        <p className="mt-2 text-center text-sm text-gray-600">
-          管理者としてログインしてください
-        </p>
+        <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">DogeDigger 管理画面</h2>
+        <p className="mt-2 text-center text-sm text-gray-600">管理者としてログインしてください</p>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
@@ -117,7 +113,8 @@ export default function AdminLoginPage() {
               <div className="text-xs text-gray-500 text-center">
                 <p>⚠️ 開発環境でのデフォルト認証情報:</p>
                 <p className="mt-1 font-mono bg-gray-100 p-2 rounded">
-                  ユーザー名: admin<br />
+                  ユーザー名: admin
+                  <br />
                   パスワード: admin123
                 </p>
               </div>

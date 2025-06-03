@@ -79,7 +79,7 @@ export default function WaitlistAdminPage() {
 
       // 興味の集計
       const { data: allEntries } = await supabase.from('waitlist').select('interests, source');
-      
+
       const topInterests: { [key: string]: number } = {};
       const topSources: { [key: string]: number } = {};
 
@@ -147,7 +147,7 @@ export default function WaitlistAdminPage() {
       'robot-walk': 'ロボット犬との散歩',
       'ar-treasure': 'AR宝探し',
       'ai-nft': 'AI生成NFT',
-      'enterprise': 'エンタープライズ',
+      enterprise: 'エンタープライズ',
     };
     return labels[interest] || interest;
   };
@@ -306,7 +306,9 @@ export default function WaitlistAdminPage() {
             <div className="text-center py-12">
               <div className="text-gray-400 text-4xl mb-4">📝</div>
               <p className="text-gray-500">
-                {searchEmail ? '検索条件に一致する登録者が見つかりませんでした。' : 'まだ登録者がいません。'}
+                {searchEmail
+                  ? '検索条件に一致する登録者が見つかりませんでした。'
+                  : 'まだ登録者がいません。'}
               </p>
             </div>
           )}

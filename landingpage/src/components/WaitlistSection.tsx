@@ -12,7 +12,7 @@ interface FormData {
 
 export default function WaitlistSection() {
   const { t, locale } = useTranslationContext();
-  
+
   useEffect(() => {
     console.log('WaitlistSection mounted');
     const waitlistElement = document.getElementById('waitlist');

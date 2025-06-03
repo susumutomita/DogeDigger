@@ -51,6 +51,7 @@ JWT_SECRET=your_super_secret_jwt_key_minimum_32_characters_long
 ### ⚠️ 開発環境のデフォルト認証情報
 
 開発環境では以下のデフォルト認証情報が使用されます：
+
 - ユーザー名: `admin`
 - パスワード: `admin123`
 

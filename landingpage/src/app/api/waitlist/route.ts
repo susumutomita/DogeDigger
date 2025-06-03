@@ -102,15 +102,11 @@ export async function GET() {
       });
     }
 
-    const { count, error } = await supabase
-      .from('waitlist')
-      .select('*', { count: 'exact', head: true });
+    const { data, error } = await supabase.rpc('get_waitlist_stats');
 
     if (error) throw error;
 
-    return NextResponse.json({
-      totalRegistrations: count || 0,
-    });
+    return NextResponse.json(data || { totalRegistrations: 0 });
   } catch (error) {
     console.error('Waitlist stats error:', error);
     return NextResponse.json(
