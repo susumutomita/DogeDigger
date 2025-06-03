@@ -8,8 +8,8 @@ const basePlans = [
   {
     id: 'basic',
     name: '体験プラン',
-    basePrice: 3000,
-    perSession: 3000,
+    basePrice: null,
+    perSession: null,
     description: '初めての方におすすめ',
     features: ['1回の宝探し体験', 'AI生成アート1点', 'NFTミント', '基本サポート'],
     highlighted: false,
@@ -17,8 +17,8 @@ const basePlans = [
   {
     id: 'premium',
     name: 'プレミアムプラン',
-    basePrice: 9800,
-    perSession: 1960,
+    basePrice: null,
+    perSession: null,
     description: '最も人気のプラン',
     features: [
       '月5回の宝探し体験',
@@ -171,24 +171,8 @@ export default function PricingSection() {
                 <p className="text-gray-600 dark:text-gray-400 mb-4">{plan.description}</p>
 
                 <div className="mb-6">
-                  {displayPrice !== null ? (
-                    <>
-                      <span className="text-4xl font-bold">¥{displayPrice.toLocaleString()}</span>
-                      <span className="text-gray-600 dark:text-gray-400">/月</span>
-                      {selectedTeamSize > 1 && plan.perSession && (
-                        <p className="text-sm text-gray-500 mt-1">
-                          1人あたり ¥{Math.floor(plan.perSession).toLocaleString()}/回
-                        </p>
-                      )}
-                      {billingCycle === 'yearly' && price !== null && (
-                        <p className="text-sm text-[#4ECDC4] mt-1">
-                          年額 ¥{Math.floor(price).toLocaleString()} (20%割引適用)
-                        </p>
-                      )}
-                    </>
-                  ) : (
-                    <span className="text-3xl font-bold">お問い合わせ</span>
-                  )}
+                  <span className="text-3xl font-bold text-gray-600 dark:text-gray-400">TBD</span>
+                  <p className="text-sm text-gray-500 mt-1">価格は近日発表予定</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
