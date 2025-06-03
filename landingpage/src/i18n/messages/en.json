@@ -15,7 +15,7 @@
     "cta_secondary": "Watch Demo"
   },
   "features": {
-    "title": "Three Revolutionary Technologies Combined",
+    "title": "Three <span class=\"gradient-text\">Revolutionary Technologies</span> Combined",
     "subtitle": "Future treasure hunting experience powered by Robotics × AR × Blockchain",
     "robot": {
       "title": "Adventure with Robot Dogs",
@@ -37,16 +37,32 @@
       "description": "Generated art is instantly minted as NFTs",
       "details": "Smart contracts on Base chain allow on-the-spot minting. Can be resold or traded later"
     },
-    "learn_more": "Learn More"
+    "innovation": {
+      "title": "Revolutionary Experience",
+      "description": "Next-generation entertainment where Robotics × AR × Blockchain converge"
+    },
+    "learn_more": "Learn More",
+    "flow_title": "Experience Flow",
+    "flow_step1": "Start Robot Dog",
+    "flow_step2": "AR Treasure Hunt",
+    "flow_step3": "Generate AI Art",
+    "flow_step4": "Get NFT!"
   },
   "demo": {
-    "title": "See the Real Experience",
+    "title": "See the Real <span class=\"gradient-text\">Experience</span>",
     "subtitle": "Watch AR treasure hunting with robot dogs in action",
-    "video_title": "DogeDigger Demo Video"
+    "video_title": "DogeDigger Demo Video",
+    "realtime_tracking": "Real-time Tracking",
+    "realtime_desc": "Visualize robot dog movements in AR",
+    "treasure_discovery": "Treasure Discovery",
+    "treasure_desc": "Display treasure chests with AR markers",
+    "nft_generation": "NFT Generation",
+    "nft_desc": "Generate and mint art on the spot"
   },
   "pricing": {
-    "title": "Simple Pricing Plans",
+    "title": "Simple <span class=\"gradient-text\">Pricing Plans</span>",
     "subtitle": "Choose from three plans that fit your needs",
+    "recommended": "Recommended",
     "tbd": "TBD",
     "tbd_description": "Pricing will be announced soon",
     "team_size": "Team Size",
@@ -103,9 +119,9 @@
     "subtitle": "Get exclusive benefits before product launch",
     "incentives": {
       "early_access": "Early Access Rights",
-      "nft_airdrop": "Exclusive NFT Airdrop",
-      "discount": "50% OFF First Use",
-      "vip_community": "VIP Community Invitation"
+      "nft_airdrop": "Special Content",
+      "discount": "Latest Updates",
+      "vip_community": "Community Access"
     },
     "form": {
       "email": "Email Address",

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslationContext } from '@/context/TranslationContext';
 
 const features = [
   {
@@ -54,16 +55,18 @@ const features = [
 
 export default function FeaturesSection() {
   const [hoveredFeature, setHoveredFeature] = useState<string | null>(null);
+  const { t } = useTranslationContext();
 
   return (
     <section id="features" className="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            3つの<span className="gradient-text">革新的技術</span>が融合
-          </h2>
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-4"
+            dangerouslySetInnerHTML={{ __html: t('features.title') }}
+          />
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            ロボティクス × AR × ブロックチェーンで実現する、未来の宝探し体験
+            {t('features.subtitle')}
           </p>
         </div>
 
@@ -100,16 +103,20 @@ export default function FeaturesSection() {
                 ) : (
                   <>
                     <div className="text-4xl md:text-5xl mb-4">{feature.icon}</div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-3">{feature.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold mb-3">
+                      {t(`features.${feature.id}.title`)}
+                    </h3>
                     <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
-                      {feature.description}
+                      {t(`features.${feature.id}.description`)}
                     </p>
 
                     {/* Expanded Details */}
                     <div
                       className={`overflow-hidden transition-all duration-300 ${hoveredFeature === feature.id ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}
                     >
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{feature.details}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        {t(`features.${feature.id}.details`)}
+                      </p>
                     </div>
 
                     {/* Arrow Icon */}
@@ -117,7 +124,7 @@ export default function FeaturesSection() {
                       <div
                         className={`inline-flex items-center text-sm font-medium text-[#FF6B35] transition-transform duration-300 ${hoveredFeature === feature.id ? 'translate-x-2' : ''}`}
                       >
-                        詳しく見る
+                        {t('features.learn_more')}
                         <svg
                           className="w-4 h-4 ml-1"
                           fill="none"
@@ -146,13 +153,15 @@ export default function FeaturesSection() {
 
         {/* Process Flow */}
         <div className="mt-20">
-          <h3 className="text-2xl font-bold text-center mb-12">体験の流れ</h3>
+          <h3 className="text-2xl font-bold text-center mb-12">
+            {t('features.flow_title') || '体験の流れ'}
+          </h3>
           <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-8">
             {[
-              { step: '1', text: 'ロボット犬を起動', icon: '🐕' },
-              { step: '2', text: 'AR空間で宝探し', icon: '📱' },
-              { step: '3', text: 'AIアート生成', icon: '🎨' },
-              { step: '4', text: 'NFTゲット！', icon: '🎉' },
+              { step: '1', text: t('features.flow_step1') || 'ロボット犬を起動', icon: '🐕' },
+              { step: '2', text: t('features.flow_step2') || 'AR空間で宝探し', icon: '📱' },
+              { step: '3', text: t('features.flow_step3') || 'AIアート生成', icon: '🎨' },
+              { step: '4', text: t('features.flow_step4') || 'NFTゲット！', icon: '🎉' },
             ].map((item, index) => (
               <div key={index} className="flex items-center">
                 <div className="flex flex-col items-center">

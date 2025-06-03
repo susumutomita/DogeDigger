@@ -15,7 +15,7 @@
     "cta_secondary": "デモを見る"
   },
   "features": {
-    "title": "3つの革新的技術が融合",
+    "title": "3つの<span class=\"gradient-text\">革新的技術</span>が融合",
     "subtitle": "ロボティクス × AR × ブロックチェーンで実現する、未来の宝探し体験",
     "robot": {
       "title": "ロボット犬と冒険",
@@ -37,16 +37,32 @@
       "description": "生成されたアートは即座にNFT化",
       "details": "Baseチェーン上のスマートコントラクトで、その場でミント。後から転売や交換も可能"
     },
-    "learn_more": "詳しく見る"
+    "innovation": {
+      "title": "革新的体験",
+      "description": "ロボティクス×AR×ブロックチェーンが融合した次世代エンターテインメント"
+    },
+    "learn_more": "詳しく見る",
+    "flow_title": "体験の流れ",
+    "flow_step1": "ロボット犬を起動",
+    "flow_step2": "AR空間で宝探し",
+    "flow_step3": "AIアート生成",
+    "flow_step4": "NFTゲット！"
   },
   "demo": {
-    "title": "実際の体験を見る",
+    "title": "実際の<span class=\"gradient-text\">体験</span>を見る",
     "subtitle": "ロボット犬と一緒にAR宝探しをする様子をご覧ください",
-    "video_title": "DogeDigger デモビデオ"
+    "video_title": "DogeDigger デモビデオ",
+    "realtime_tracking": "リアルタイム追跡",
+    "realtime_desc": "ロボット犬の動きをARで可視化",
+    "treasure_discovery": "宝物発見",
+    "treasure_desc": "ARマーカーで宝箱を表示",
+    "nft_generation": "NFT生成",
+    "nft_desc": "その場でアートを生成・ミント"
   },
   "pricing": {
-    "title": "シンプルな料金プラン",
+    "title": "シンプルな<span class=\"gradient-text\">料金プラン</span>",
     "subtitle": "あなたのニーズに合わせて選べる3つのプラン",
+    "recommended": "おすすめ",
     "tbd": "TBD",
     "tbd_description": "価格は近日発表予定",
     "team_size": "利用人数",
@@ -98,9 +114,9 @@
     "subtitle": "製品ローンチ前に限定特典を手に入れよう",
     "incentives": {
       "early_access": "早期アクセス権",
-      "nft_airdrop": "限定NFTエアドロップ",
-      "discount": "初回利用50%OFF",
-      "vip_community": "VIPコミュニティ招待"
+      "nft_airdrop": "特典コンテンツ",
+      "discount": "最新情報をお届け",
+      "vip_community": "コミュニティ参加"
     },
     "form": {
       "email": "メールアドレス",

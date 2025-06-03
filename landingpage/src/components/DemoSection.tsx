@@ -2,19 +2,22 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useTranslationContext } from '@/context/TranslationContext';
 
 export default function DemoSection() {
   const [showVideo, setShowVideo] = useState(false);
+  const { t } = useTranslationContext();
 
   return (
     <section id="demo" className="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            実際の<span className="gradient-text">体験</span>を見る
-          </h2>
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-4"
+            dangerouslySetInnerHTML={{ __html: t('demo.title') }}
+          />
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            ロボット犬と一緒にAR宝探しをする様子をご覧ください
+            {t('demo.subtitle')}
           </p>
         </div>
 
@@ -64,7 +67,7 @@ export default function DemoSection() {
               width="100%"
               height="100%"
               src="https://www.youtube.com/embed/w-pk6swpKLc?si=7m_S3K5dGeJZ3ySh&autoplay=1"
-              title="DogeDigger デモビデオ"
+              title={t('demo.video_title')}
               style={{ border: 0 }}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -77,9 +80,21 @@ export default function DemoSection() {
         {/* Key highlights */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           {[
-            { emoji: '🐕', title: 'リアルタイム追跡', desc: 'ロボット犬の動きをARで可視化' },
-            { emoji: '💎', title: '宝物発見', desc: 'ARマーカーで宝箱を表示' },
-            { emoji: '🎨', title: 'NFT生成', desc: 'その場でアートを生成・ミント' },
+            {
+              emoji: '🐕',
+              title: t('demo.realtime_tracking') || 'Real-time Tracking',
+              desc: t('demo.realtime_desc') || 'Visualize robot dog movements in AR',
+            },
+            {
+              emoji: '💎',
+              title: t('demo.treasure_discovery') || 'Treasure Discovery',
+              desc: t('demo.treasure_desc') || 'Display treasure chests with AR markers',
+            },
+            {
+              emoji: '🎨',
+              title: t('demo.nft_generation') || 'NFT Generation',
+              desc: t('demo.nft_desc') || 'Generate and mint art on the spot',
+            },
           ].map((item, index) => (
             <div
               key={index}

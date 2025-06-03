@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { useTranslationContext } from '@/context/TranslationContext';
 
 const basePlans = [
   {
@@ -48,6 +49,7 @@ const basePlans = [
 ];
 
 export default function PricingSection() {
+  const { t } = useTranslationContext();
   return (
     <section id="pricing" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -58,11 +60,12 @@ export default function PricingSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            シンプルな<span className="gradient-text">料金プラン</span>
-          </h2>
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-4"
+            dangerouslySetInnerHTML={{ __html: t('pricing.title') }}
+          />
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            あなたのニーズに合わせて選べる3つのプラン
+            {t('pricing.subtitle')}
           </p>
         </motion.div>
 
@@ -82,7 +85,7 @@ export default function PricingSection() {
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white px-4 py-1 rounded-full text-sm font-medium">
-                    おすすめ
+                    {t('pricing.recommended')}
                   </span>
                 </div>
               )}
@@ -114,7 +117,7 @@ export default function PricingSection() {
                     : 'border-2 border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35] hover:text-white'
                 }`}
               >
-                ウェイトリストに登録
+                {t('pricing.cta')}
               </button>
             </motion.div>
           ))}
@@ -128,9 +131,7 @@ export default function PricingSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-600 dark:text-gray-400">
-            全てのプランに30日間の返金保証が付いています
-          </p>
+          <p className="text-gray-600 dark:text-gray-400">{t('pricing.guarantee')}</p>
         </motion.div>
       </div>
     </section>
