@@ -2,32 +2,34 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { useTranslationContext } from '@/context/TranslationContext';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const { t } = useTranslationContext();
   const footerLinks = {
     product: [
-      { label: '特徴', href: '#features' },
-      { label: 'デモ', href: '#demo' },
-      { label: '料金', href: '#pricing' },
-      { label: 'ロードマップ', href: '#roadmap' },
+      { label: t('footer.product_links.features'), href: '#features' },
+      { label: t('footer.product_links.demo'), href: '#demo' },
+      { label: t('footer.product_links.pricing'), href: '#pricing' },
+      { label: t('footer.product_links.roadmap'), href: '#roadmap' },
     ],
     company: [
-      { label: 'チーム', href: '#team' },
-      { label: 'ブログ', href: '#blog' },
-      { label: 'お問い合わせ', href: '#contact' },
-      { label: 'プレスキット', href: '#press' },
+      { label: t('footer.company_links.team'), href: '#team' },
+      { label: t('footer.company_links.blog'), href: '#blog' },
+      { label: t('footer.company_links.contact'), href: '#contact' },
+      { label: t('footer.company_links.press'), href: '#press' },
     ],
     legal: [
-      { label: '利用規約', href: '#terms' },
-      { label: 'プライバシーポリシー', href: '#privacy' },
-      { label: '特定商取引法', href: '#legal' },
+      { label: t('footer.legal_links.terms'), href: '#terms' },
+      { label: t('footer.legal_links.privacy'), href: '#privacy' },
+      { label: t('footer.legal_links.legal'), href: '#legal' },
     ],
     social: [
-      { label: 'Twitter', href: 'https://twitter.com', icon: '𝕏' },
-      { label: 'Discord', href: 'https://discord.com', icon: '💬' },
-      { label: 'GitHub', href: 'https://github.com', icon: '🐙' },
+      { label: t('footer.social_links.twitter'), href: 'https://twitter.com', icon: '𝕏' },
+      { label: t('footer.social_links.discord'), href: 'https://discord.com', icon: '💬' },
+      { label: t('footer.social_links.github'), href: 'https://github.com', icon: '🐙' },
     ],
   };
 
@@ -61,10 +63,10 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">
-              犬も歩けばトークン掘れる
+              {t('footer.tagline')}
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-              ロボット犬×AR×NFTで実現する、新感覚の宝探し体験
+              {t('footer.description')}
             </p>
             {/* Social Icons */}
             <div className="flex space-x-3">
@@ -85,7 +87,9 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">プロダクト</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+              {t('footer.links.product')}
+            </h3>
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
                 <li key={link.href}>
@@ -101,7 +105,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">会社情報</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+              {t('footer.links.company')}
+            </h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -117,7 +123,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">法的情報</h3>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+              {t('footer.links.legal')}
+            </h3>
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
@@ -136,9 +144,11 @@ export default function Footer() {
         {/* Newsletter */}
         <div className="border-t border-gray-200/50 dark:border-gray-800/50 pt-12 mb-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-2 gradient-text">最新情報をお届け</h3>
+            <h3 className="text-2xl font-bold mb-2 gradient-text">
+              {t('footer.newsletter.title')}
+            </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              プロダクトアップデートや限定オファーをメールでお知らせします
+              {t('footer.newsletter.description')}
             </p>
             <form
               onSubmit={handleSubscribe}
@@ -148,7 +158,7 @@ export default function Footer() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
+                placeholder={t('waitlist.form.email_placeholder')}
                 required
                 className="flex-1 px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-full focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent dark:bg-gray-800/50 backdrop-blur-sm"
               />
@@ -156,7 +166,7 @@ export default function Footer() {
                 type="submit"
                 className="px-8 py-3 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-medium rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 whitespace-nowrap"
               >
-                {subscribed ? '✓ 登録完了' : '購読する'}
+                {subscribed ? t('footer.newsletter.success') : t('footer.newsletter.submit')}
               </button>
             </form>
           </div>
@@ -166,17 +176,15 @@ export default function Footer() {
         <div className="border-t border-gray-200/50 dark:border-gray-800/50 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
             <div className="mb-4 md:mb-0">
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                © 2025 DogeDigger. All rights reserved.
-              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">{t('footer.copyright')}</p>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
-                Made with 🐕 by the DogeDigger team
+                {t('footer.made_with')}
               </p>
             </div>
             <div className="flex items-center space-x-4 text-sm text-gray-500">
               <span className="inline-flex items-center">
                 <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                All systems operational
+                {t('footer.status')}
               </span>
             </div>
           </div>

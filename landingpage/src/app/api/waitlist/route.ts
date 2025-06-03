@@ -98,7 +98,7 @@ export async function GET() {
     // Supabaseが設定されていない場合はモック値を返す
     if (!isSupabaseConfigured) {
       return NextResponse.json({
-        totalRegistrations: 1234, // デモ用の値
+        totalRegistrations: 42, // 控えめなデモ用の値
       });
     }
 
@@ -114,7 +114,7 @@ export async function GET() {
   } catch (error) {
     console.error('Waitlist stats error:', error);
     return NextResponse.json(
-      { totalRegistrations: 1234 }, // エラー時もデモ値を返す
+      { totalRegistrations: 42 }, // エラー時もデモ値を返す
       { status: 200 }
     );
   }

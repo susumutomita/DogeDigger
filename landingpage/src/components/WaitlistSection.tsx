@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslationContext } from '@/context/TranslationContext';
 
 interface FormData {
   email: string;
@@ -10,6 +11,7 @@ interface FormData {
 }
 
 export default function WaitlistSection() {
+  const { t, locale } = useTranslationContext();
   const [formData, setFormData] = useState<FormData>({
     email: '',
     name: '',
@@ -19,7 +21,7 @@ export default function WaitlistSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
-  const [totalRegistrations, setTotalRegistrations] = useState(1234); // デフォルト値
+  const [totalRegistrations, setTotalRegistrations] = useState(0); // デフォルト値
 
   // 登録者数を取得
   useEffect(() => {
@@ -36,19 +38,25 @@ export default function WaitlistSection() {
   }, []);
 
   const interests = [
-    { id: 'robot-walk', label: 'ロボット犬との散歩体験' },
-    { id: 'ar-treasure', label: 'AR宝探しゲーム' },
-    { id: 'ai-nft', label: 'AI生成アートNFT' },
-    { id: 'enterprise', label: 'イベント・企業向けソリューション' },
+    {
+      id: 'robot-walk',
+      label: locale === 'ja' ? 'ロボット犬との散歩体験' : 'Robot dog walking experience',
+    },
+    { id: 'ar-treasure', label: locale === 'ja' ? 'AR宝探しゲーム' : 'AR treasure hunt game' },
+    { id: 'ai-nft', label: locale === 'ja' ? 'AI生成アートNFT' : 'AI-generated art NFT' },
+    {
+      id: 'enterprise',
+      label: locale === 'ja' ? 'イベント・企業向けソリューション' : 'Event & enterprise solutions',
+    },
   ];
 
   const sources = [
-    { value: '', label: '選択してください' },
+    { value: '', label: locale === 'ja' ? '選択してください' : 'Please select' },
     { value: 'twitter', label: 'Twitter/X' },
     { value: 'discord', label: 'Discord' },
-    { value: 'friend', label: '友人・知人' },
-    { value: 'search', label: '検索' },
-    { value: 'other', label: 'その他' },
+    { value: 'friend', label: locale === 'ja' ? '友人・知人' : 'Friend/Acquaintance' },
+    { value: 'search', label: locale === 'ja' ? '検索' : 'Search' },
+    { value: 'other', label: locale === 'ja' ? 'その他' : 'Other' },
   ];
 
   const validateForm = (): boolean => {
@@ -57,12 +65,17 @@ export default function WaitlistSection() {
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email || !emailRegex.test(formData.email)) {
-      newErrors.email = '有効なメールアドレスを入力してください';
+      newErrors.email =
+        locale === 'ja'
+          ? '有効なメールアドレスを入力してください'
+          : 'Please enter a valid email address';
     }
 
     // Interests validation
     if (formData.interests.length === 0) {
-      newErrors.interests = ['少なくとも1つ選択してください'];
+      newErrors.interests = [
+        locale === 'ja' ? '少なくとも1つ選択してください' : 'Please select at least one option',
+      ];
     }
 
     setErrors(newErrors);
@@ -111,7 +124,9 @@ export default function WaitlistSection() {
         email:
           error instanceof Error
             ? error.message
-            : '登録中にエラーが発生しました。もう一度お試しください。',
+            : locale === 'ja'
+              ? '登録中にエラーが発生しました。もう一度お試しください。'
+              : 'An error occurred during registration. Please try again.',
       });
     } finally {
       setIsSubmitting(false);
@@ -158,10 +173,8 @@ export default function WaitlistSection() {
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <h3 className="text-2xl font-bold mb-2">登録ありがとうございます！</h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              早期アクセスの準備ができ次第、メールでお知らせします。
-            </p>
+            <h3 className="text-2xl font-bold mb-2">{t('waitlist.success.title')}</h3>
+            <p className="text-gray-600 dark:text-gray-300">{t('waitlist.success.message')}</p>
           </div>
         </div>
       </section>
@@ -172,20 +185,16 @@ export default function WaitlistSection() {
     <section id="waitlist" className="py-20 px-4 bg-gradient-to-b from-transparent to-[#FFE66D]/10">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">早期アクセス</span>に登録
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-            製品ローンチ前に限定特典を手に入れよう
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('waitlist.title')}</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">{t('waitlist.subtitle')}</p>
 
           {/* Incentives */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
             {[
-              { icon: '🎯', text: '早期アクセス権' },
-              { icon: '🎁', text: '限定NFTエアドロップ' },
-              { icon: '💸', text: '初回利用50%OFF' },
-              { icon: '👑', text: 'VIPコミュニティ招待' },
+              { icon: '🎯', text: t('waitlist.incentives.early_access') },
+              { icon: '🎁', text: t('waitlist.incentives.nft_airdrop') },
+              { icon: '📧', text: t('waitlist.incentives.discount') },
+              { icon: '🤝', text: t('waitlist.incentives.vip_community') },
             ].map((item, index) => (
               <div
                 key={index}
@@ -206,7 +215,7 @@ export default function WaitlistSection() {
           {/* Email */}
           <div className="mb-6">
             <label htmlFor="email" className="block text-sm font-medium mb-2">
-              メールアドレス <span className="text-red-500">*</span>
+              {t('waitlist.form.email')} <span className="text-red-500">*</span>
             </label>
             <input
               type="email"
@@ -215,7 +224,7 @@ export default function WaitlistSection() {
               value={formData.email}
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent dark:bg-gray-700"
-              placeholder="your@email.com"
+              placeholder={t('waitlist.form.email_placeholder')}
             />
             {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
           </div>
@@ -223,7 +232,7 @@ export default function WaitlistSection() {
           {/* Name */}
           <div className="mb-6">
             <label htmlFor="name" className="block text-sm font-medium mb-2">
-              お名前（任意）
+              {t('waitlist.form.name')}
             </label>
             <input
               type="text"
@@ -232,13 +241,13 @@ export default function WaitlistSection() {
               value={formData.name || ''}
               onChange={handleInputChange}
               className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent dark:bg-gray-700"
-              placeholder="山田太郎"
+              placeholder={t('waitlist.form.name_placeholder')}
             />
           </div>
 
           {/* Interests */}
           <div className="mb-6">
-            <label className="block text-sm font-medium mb-2">興味のある機能（複数選択可）</label>
+            <label className="block text-sm font-medium mb-2">{t('waitlist.form.interests')}</label>
             <div className="space-y-2">
               {interests.map((interest) => (
                 <label key={interest.id} className="flex items-center cursor-pointer">
@@ -258,7 +267,7 @@ export default function WaitlistSection() {
           {/* Source */}
           <div className="mb-8">
             <label htmlFor="source" className="block text-sm font-medium mb-2">
-              どこで知りましたか？
+              {t('waitlist.form.source')}
             </label>
             <select
               id="source"
@@ -281,21 +290,18 @@ export default function WaitlistSection() {
             disabled={isSubmitting}
             className="w-full py-4 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isSubmitting ? '送信中...' : '早期アクセスを申し込む'}
+            {isSubmitting ? t('waitlist.form.submitting') : t('waitlist.form.submit')}
           </button>
 
           <p className="text-xs text-gray-500 dark:text-gray-400 mt-4 text-center">
-            登録することで、利用規約とプライバシーポリシーに同意したものとみなされます。
+            {t('waitlist.form.privacy')}
           </p>
         </form>
 
         {/* Social Proof */}
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            <span className="font-bold text-[#FF6B35]">
-              {totalRegistrations.toLocaleString()}人
-            </span>
-            が既に登録済み
+            {t('waitlist.social_proof', { count: totalRegistrations.toLocaleString() })}
           </p>
         </div>
       </div>

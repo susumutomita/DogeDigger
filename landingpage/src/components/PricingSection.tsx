@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { useTranslationContext } from '@/context/TranslationContext';
+import TitleWithGradient from './TitleWithGradient';
 
 const basePlans = [
   {
@@ -48,6 +50,7 @@ const basePlans = [
 ];
 
 export default function PricingSection() {
+  const { t } = useTranslationContext();
   return (
     <section id="pricing" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -58,11 +61,13 @@ export default function PricingSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            シンプルな<span className="gradient-text">料金プラン</span>
-          </h2>
+          <TitleWithGradient
+            text={t('pricing.title')}
+            gradientText={t('pricing.title_gradient')}
+            className="text-4xl md:text-5xl font-bold mb-4"
+          />
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            あなたのニーズに合わせて選べる3つのプラン
+            {t('pricing.subtitle')}
           </p>
         </motion.div>
 
@@ -82,24 +87,30 @@ export default function PricingSection() {
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white px-4 py-1 rounded-full text-sm font-medium">
-                    おすすめ
+                    {t('pricing.recommended')}
                   </span>
                 </div>
               )}
 
-              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">{plan.description}</p>
+              <h3 className="text-2xl font-bold mb-2">{t(`pricing.plans.${plan.id}.name`)}</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                {t(`pricing.plans.${plan.id}.description`)}
+              </p>
 
               <div className="mb-6">
-                <span className="text-3xl font-bold text-gray-600 dark:text-gray-400">TBD</span>
-                <p className="text-sm text-gray-500 mt-1">価格は近日発表予定</p>
+                <span className="text-3xl font-bold text-gray-600 dark:text-gray-400">
+                  {t('pricing.tbd')}
+                </span>
+                <p className="text-sm text-gray-500 mt-1">{t('pricing.tbd_description')}</p>
               </div>
 
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
                     <Check className="w-5 h-5 text-[#4ECDC4] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">{feature}</span>
+                    <span className="text-sm">
+                      {t(`pricing.plans.${plan.id}.features.${featureIndex}`)}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -114,7 +125,7 @@ export default function PricingSection() {
                     : 'border-2 border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35] hover:text-white'
                 }`}
               >
-                ウェイトリストに登録
+                {t('pricing.cta')}
               </button>
             </motion.div>
           ))}
@@ -128,9 +139,7 @@ export default function PricingSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-600 dark:text-gray-400">
-            全てのプランに30日間の返金保証が付いています
-          </p>
+          <p className="text-gray-600 dark:text-gray-400">{t('pricing.guarantee')}</p>
         </motion.div>
       </div>
     </section>

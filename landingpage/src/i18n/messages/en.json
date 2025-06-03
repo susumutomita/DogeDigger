@@ -15,7 +15,8 @@
     "cta_secondary": "Watch Demo"
   },
   "features": {
-    "title": "Three Revolutionary Technologies Combined",
+    "title": "Three {gradient} Combined",
+    "title_gradient": "Revolutionary Technologies",
     "subtitle": "Future treasure hunting experience powered by Robotics × AR × Blockchain",
     "robot": {
       "title": "Adventure with Robot Dogs",
@@ -37,16 +38,36 @@
       "description": "Generated art is instantly minted as NFTs",
       "details": "Smart contracts on Base chain allow on-the-spot minting. Can be resold or traded later"
     },
-    "learn_more": "Learn More"
+    "innovation": {
+      "title": "Revolutionary Experience",
+      "description": "Next-generation entertainment where Robotics × AR × Blockchain converge"
+    },
+    "learn_more": "Learn More",
+    "flow_title": "Experience Flow",
+    "flow_step1": "Start Robot Dog",
+    "flow_step2": "AR Treasure Hunt",
+    "flow_step3": "Generate AI Art",
+    "flow_step4": "Get NFT!"
   },
   "demo": {
-    "title": "See the Real Experience",
+    "title": "See the Real {gradient}",
+    "title_gradient": "Experience",
     "subtitle": "Watch AR treasure hunting with robot dogs in action",
-    "video_title": "DogeDigger Demo Video"
+    "video_title": "DogeDigger Demo Video",
+    "realtime_tracking": "Real-time Tracking",
+    "realtime_desc": "Visualize robot dog movements in AR",
+    "treasure_discovery": "Treasure Discovery",
+    "treasure_desc": "Display treasure chests with AR markers",
+    "nft_generation": "NFT Generation",
+    "nft_desc": "Generate and mint art on the spot"
   },
   "pricing": {
-    "title": "Simple Pricing Plans",
+    "title": "Simple {gradient}",
+    "title_gradient": "Pricing Plans",
     "subtitle": "Choose from three plans that fit your needs",
+    "recommended": "Recommended",
+    "tbd": "TBD",
+    "tbd_description": "Pricing will be announced soon",
     "team_size": "Team Size",
     "billing_cycle": "Billing Cycle",
     "monthly": "Monthly",
@@ -89,7 +110,7 @@
         ]
       }
     },
-    "cta": "Get Started",
+    "cta": "Join Waitlist",
     "contact": "Contact Us",
     "per_month": "/month",
     "per_person": "per person",
@@ -101,9 +122,9 @@
     "subtitle": "Get exclusive benefits before product launch",
     "incentives": {
       "early_access": "Early Access Rights",
-      "nft_airdrop": "Exclusive NFT Airdrop",
-      "discount": "50% OFF First Use",
-      "vip_community": "VIP Community Invitation"
+      "nft_airdrop": "Special Content",
+      "discount": "Latest Updates",
+      "vip_community": "Community Access"
     },
     "form": {
       "email": "Email Address",
@@ -134,6 +155,30 @@
       "company": "Company",
       "legal": "Legal"
     },
+    "product_links": {
+      "features": "Features",
+      "demo": "Demo",
+      "pricing": "Pricing",
+      "roadmap": "Roadmap"
+    },
+    "company_links": {
+      "team": "Team",
+      "blog": "Blog",
+      "contact": "Contact",
+      "press": "Press Kit"
+    },
+    "legal_links": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "legal": "Legal Notice"
+    },
+    "social_links": {
+      "twitter": "Twitter",
+      "discord": "Discord",
+      "github": "GitHub"
+    },
+    "tagline": "Every Step Finds Treasure",
+    "description": "Revolutionary treasure hunting experience powered by Robot Dogs × AR × NFT",
     "status": "All systems operational",
     "copyright": "© 2025 DogeDigger. All rights reserved.",
     "made_with": "Made with 🐕 by the DogeDigger team"
