@@ -113,7 +113,7 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         <div
           className={`md:hidden transition-all duration-300 ${
-            isMobileMenuOpen ? 'max-h-96' : 'max-h-0'
+            isMobileMenuOpen ? 'max-h-screen' : 'max-h-0'
           } overflow-hidden bg-white dark:bg-gray-900 shadow-lg`}
         >
           <div className="px-4 py-4 space-y-4">
@@ -127,7 +127,20 @@ export default function Navigation() {
                 {item.label}
               </Link>
             ))}
-            <button className="w-full px-6 py-2 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-medium rounded-full hover:shadow-lg transition-all duration-300">
+            <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
+              <LanguageSwitcher 
+                currentLocale={locale} 
+                onLocaleChange={setLocale} 
+                variant="mobile"
+              />
+            </div>
+            <button 
+              onClick={() => {
+                document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
+                setIsMobileMenuOpen(false);
+              }}
+              className="w-full px-6 py-2 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-medium rounded-full hover:shadow-lg transition-all duration-300"
+            >
               {t('navigation.early_access')}
             </button>
           </div>
