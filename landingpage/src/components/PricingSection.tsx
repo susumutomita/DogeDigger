@@ -92,8 +92,8 @@ export default function PricingSection() {
                 </div>
               )}
 
-              <h3 className="text-2xl font-bold mb-2">{t(`pricing.plans.${plan.id}.name`)}</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
+              <h3 className="text-2xl font-bold mb-2 line-clamp-1">{t(`pricing.plans.${plan.id}.name`)}</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
                 {t(`pricing.plans.${plan.id}.description`)}
               </p>
 
@@ -108,7 +108,7 @@ export default function PricingSection() {
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
                     <Check className="w-5 h-5 text-[#4ECDC4] mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">
+                    <span className="text-sm line-clamp-2">
                       {t(`pricing.plans.${plan.id}.features.${featureIndex}`)}
                     </span>
                   </li>

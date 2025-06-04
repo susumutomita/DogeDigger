@@ -103,10 +103,10 @@ export default function FeaturesSection() {
                 ) : (
                   <>
                     <div className="text-4xl md:text-5xl mb-4">{feature.icon}</div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-3">
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 line-clamp-2">
                       {t(`features.${feature.id}.title`)}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
+                    <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow line-clamp-3">
                       {t(`features.${feature.id}.description`)}
                     </p>
 
@@ -114,7 +114,7 @@ export default function FeaturesSection() {
                     <div
                       className={`overflow-hidden transition-all duration-300 ${hoveredFeature === feature.id ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}
                     >
-                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                      <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-4">
                         {t(`features.${feature.id}.details`)}
                       </p>
                     </div>
