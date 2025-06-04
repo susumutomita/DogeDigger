@@ -128,13 +128,13 @@ export default function Navigation() {
               </Link>
             ))}
             <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
-              <LanguageSwitcher 
-                currentLocale={locale} 
-                onLocaleChange={setLocale} 
+              <LanguageSwitcher
+                currentLocale={locale}
+                onLocaleChange={setLocale}
                 variant="mobile"
               />
             </div>
-            <button 
+            <button
               onClick={() => {
                 document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
                 setIsMobileMenuOpen(false);

@@ -9,7 +9,11 @@ interface LanguageSwitcherProps {
   variant?: 'default' | 'mobile';
 }
 
-export default function LanguageSwitcher({ currentLocale, onLocaleChange, variant = 'default' }: LanguageSwitcherProps) {
+export default function LanguageSwitcher({
+  currentLocale,
+  onLocaleChange,
+  variant = 'default',
+}: LanguageSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   // モバイル版のシンプルなトグルスイッチ
@@ -51,7 +55,12 @@ export default function LanguageSwitcher({ currentLocale, onLocaleChange, varian
           stroke="currentColor"
           viewBox="0 0 24 24"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
         </svg>
       </button>
 
