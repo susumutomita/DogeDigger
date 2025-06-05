@@ -16,9 +16,9 @@ export default function Footer() {
       { label: t('footer.product_links.roadmap'), href: '#roadmap' },
     ],
     legal: [
-      { label: t('footer.legal_links.terms'), href: '#terms' },
-      { label: t('footer.legal_links.privacy'), href: '#privacy' },
-      { label: t('footer.legal_links.legal'), href: '#legal' },
+      { label: t('footer.legal_links.terms'), href: '/terms' },
+      { label: t('footer.legal_links.privacy'), href: '/privacy' },
+      { label: t('footer.legal_links.legal'), href: '/legal' },
     ],
     social: [
       { label: t('footer.social_links.twitter'), href: 'https://twitter.com', icon: '𝕏' },
