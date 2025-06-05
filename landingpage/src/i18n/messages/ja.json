@@ -176,5 +176,236 @@
     "status": "All systems operational",
     "copyright": "© 2025 DogeDigger. All rights reserved.",
     "made_with": "Made with 🐕 by the DogeDigger team"
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "last_updated": "最終更新日",
+    "introduction": "DogeDigger（以下「当社」）は、お客様のプライバシーを尊重し、個人情報の保護に努めています。このプライバシーポリシーは、当社がどのようにお客様の情報を収集、使用、共有、保護するかについて説明します。",
+    "back_to_home": "ホームに戻る",
+    "sections": {
+      "information_collection": {
+        "title": "1. 収集する情報",
+        "personal_info": {
+          "title": "個人情報",
+          "email": "メールアドレス",
+          "name": "お名前（任意）",
+          "wallet": "ウォレットアドレス（NFT利用時）"
+        },
+        "usage_info": {
+          "title": "利用情報",
+          "location": "位置情報（AR宝探し時）",
+          "device": "デバイス情報（機種、OS等）",
+          "interaction": "サービス利用履歴"
+        },
+        "generated_content": {
+          "title": "生成コンテンツ",
+          "ai_art": "AI生成アートのメタデータ",
+          "nft_data": "NFTトランザクション情報"
+        }
+      },
+      "information_use": {
+        "title": "2. 情報の利用目的",
+        "service_provision": "サービスの提供・改善",
+        "nft_management": "NFTの生成・管理",
+        "improvement": "ユーザー体験の向上",
+        "communication": "お客様へのご連絡",
+        "legal": "法的義務の遵守"
+      },
+      "data_sharing": {
+        "title": "3. 情報の共有",
+        "introduction": "当社は、以下の場合を除き、お客様の個人情報を第三者に販売、貸与、または共有することはありません：",
+        "blockchain": "ブロックチェーン上の公開情報（NFT関連）",
+        "service_providers": "サービス提供に必要な委託先",
+        "legal_requirements": "法的要求がある場合"
+      },
+      "data_security": {
+        "title": "4. データセキュリティ",
+        "description": "当社は、お客様の情報を保護するため、業界標準のセキュリティ対策を実施しています。暗号化、アクセス制御、定期的なセキュリティ監査等により、お客様の情報の安全性を確保しています。"
+      },
+      "your_rights": {
+        "title": "5. お客様の権利",
+        "access": "個人情報へのアクセス権",
+        "correction": "情報の訂正・更新権",
+        "deletion": "情報の削除要求権",
+        "portability": "データポータビリティ権",
+        "objection": "処理に対する異議申立権"
+      },
+      "cookies": {
+        "title": "6. クッキーの使用",
+        "description": "当社は、サービスの改善とパーソナライズのためにクッキーを使用します。ブラウザの設定により、クッキーの使用を制限することができます。"
+      },
+      "children": {
+        "title": "7. お子様のプライバシー",
+        "description": "当社のサービスは13歳以上の方を対象としています。13歳未満のお子様の個人情報を意図的に収集することはありません。"
+      },
+      "updates": {
+        "title": "8. ポリシーの更新",
+        "description": "このプライバシーポリシーは必要に応じて更新されることがあります。重要な変更がある場合は、サービス内またはメールでお知らせします。"
+      },
+      "contact": {
+        "title": "9. お問い合わせ",
+        "description": "プライバシーに関するご質問やご懸念がございましたら、以下までお問い合わせください："
+      }
+    }
+  },
+  "terms": {
+    "title": "利用規約",
+    "last_updated": "最終更新日",
+    "introduction": "この利用規約（以下「本規約」）は、DogeDigger（以下「当社」）が提供するサービスの利用条件を定めるものです。本サービスをご利用いただく前に、必ず本規約をお読みください。",
+    "back_to_home": "ホームに戻る",
+    "sections": {
+      "service_overview": {
+        "title": "1. サービス概要",
+        "description": "DogeDiggerは、以下のサービスを提供します：",
+        "robot_dog": "ロボット犬を使用した現実世界の探索",
+        "ar_treasure": "AR技術による宝探し体験",
+        "ai_art": "AI生成アートの作成",
+        "nft_minting": "生成アートのNFT化"
+      },
+      "eligibility": {
+        "title": "2. 利用資格",
+        "description": "本サービスを利用するには、以下の条件を満たす必要があります：",
+        "age": "13歳以上であること",
+        "legal_capacity": "法的な契約締結能力を有すること",
+        "compliance": "本規約を遵守すること"
+      },
+      "account": {
+        "title": "3. アカウント登録",
+        "description": "一部のサービス利用にはアカウント登録が必要です：",
+        "accurate_info": "正確な情報を提供すること",
+        "security": "アカウントのセキュリティを維持すること",
+        "responsibility": "アカウントでの活動に責任を持つこと"
+      },
+      "nft": {
+        "title": "4. NFTとデジタル資産",
+        "description": "NFTに関する重要事項：",
+        "ownership": "NFT所有権はブロックチェーン上に記録されます",
+        "blockchain": "Baseチェーンを使用します",
+        "gas_fees": "ガス代はお客様負担となります",
+        "no_guarantee": "価値の保証はありません"
+      },
+      "acceptable_use": {
+        "title": "5. 利用上の注意",
+        "description": "以下の行為は禁止されています：",
+        "lawful": "違法行為",
+        "no_harm": "他者への迷惑行為",
+        "no_interference": "サービスの妨害",
+        "no_reverse_engineering": "リバースエンジニアリング"
+      },
+      "intellectual_property": {
+        "title": "6. 知的財産権",
+        "description": "サービスに関する知的財産権について：",
+        "user_content": {
+          "title": "ユーザーコンテンツ",
+          "description": "お客様が生成したコンテンツの権利はお客様に帰属します。ただし、当社はサービス提供のために必要な範囲で使用許諾を受けるものとします。"
+        },
+        "ai_generated": {
+          "title": "AI生成コンテンツ",
+          "description": "AI生成アートの著作権は、NFT化によりお客様に譲渡されます。"
+        }
+      },
+      "privacy": {
+        "title": "7. プライバシー",
+        "description": "個人情報の取り扱いについては、プライバシーポリシーをご確認ください。"
+      },
+      "disclaimers": {
+        "title": "8. 免責事項",
+        "as_is": "本サービスは「現状有姿」で提供されます。",
+        "no_warranty": "当社は、サービスの完全性、正確性、有用性等について、いかなる保証も行いません。"
+      },
+      "liability": {
+        "title": "9. 責任制限",
+        "description": "法令で認められる最大限の範囲において、当社は間接的、偶発的、特別、結果的損害について責任を負いません。"
+      },
+      "indemnification": {
+        "title": "10. 補償",
+        "description": "お客様は、本サービスの利用に起因する第三者からの請求について、当社を補償し、防御するものとします。"
+      },
+      "termination": {
+        "title": "11. 解約",
+        "description": "お客様はいつでもアカウントを削除できます。当社は、規約違反の場合、サービスを停止する権利を有します。"
+      },
+      "governing_law": {
+        "title": "12. 準拠法",
+        "description": "本規約は日本法に準拠し、東京地方裁判所を専属的合意管轄裁判所とします。"
+      },
+      "changes": {
+        "title": "13. 規約の変更",
+        "description": "当社は必要に応じて本規約を変更することがあります。重要な変更はお客様に通知します。"
+      },
+      "contact": {
+        "title": "14. お問い合わせ",
+        "description": "本規約に関するご質問は、以下までお問い合わせください："
+      }
+    }
+  },
+  "legal": {
+    "title": "特定商取引法に基づく表記",
+    "last_updated": "最終更新日",
+    "back_to_home": "ホームに戻る",
+    "sections": {
+      "seller": {
+        "title": "販売業者",
+        "name_label": "事業者名",
+        "representative_label": "代表者",
+        "address_label": "所在地"
+      },
+      "contact": {
+        "title": "連絡先",
+        "email_label": "メールアドレス",
+        "hours_label": "営業時間",
+        "note": "お問い合わせはメールにて承っております。"
+      },
+      "pricing": {
+        "title": "販売価格",
+        "description": "各サービスプランの価格は、サービスページに表示されている通りです。",
+        "display_price": "表示価格がお支払い金額となります",
+        "tax_included": "価格は税込表示です",
+        "gas_fees": "NFTミント時のガス代は別途必要です"
+      },
+      "payment": {
+        "title": "支払方法",
+        "credit_card": "クレジットカード（Visa、Mastercard、American Express、JCB）",
+        "crypto": "暗号資産（ETH、USDC）",
+        "note": "決済は安全な決済システムを通じて処理されます。"
+      },
+      "payment_timing": {
+        "title": "支払期限",
+        "description": "サービス利用開始前にお支払いください。月額プランは毎月自動更新されます。"
+      },
+      "delivery": {
+        "title": "商品の引渡し時期",
+        "digital_content": "デジタルコンテンツは決済完了後、即時利用可能となります。",
+        "nft": "NFTは生成後、指定のウォレットアドレスに送信されます。"
+      },
+      "returns": {
+        "title": "返品・交換について",
+        "digital_nature": "デジタルコンテンツの性質上、返品・交換は原則として承っておりません。",
+        "defect_policy": "サービスに不具合がある場合は、速やかにサポートまでご連絡ください。"
+      },
+      "cancellation": {
+        "title": "キャンセルについて",
+        "policy": "月額プランは次回更新日の24時間前までにキャンセル可能です。日割り返金は行っておりません。"
+      },
+      "requirements": {
+        "title": "動作環境",
+        "mobile": {
+          "title": "モバイルアプリ"
+        },
+        "ar": {
+          "title": "AR対応デバイス"
+        },
+        "browser": {
+          "title": "推奨ブラウザ"
+        }
+      },
+      "notes": {
+        "title": "その他の特記事項",
+        "blockchain_nature": "ブロックチェーン取引は不可逆的です",
+        "crypto_wallet": "NFT受取には暗号資産ウォレットが必要です",
+        "gas_responsibility": "ガス代の変動リスクはお客様負担となります",
+        "age_restriction": "13歳未満の方はご利用いただけません"
+      }
+    }
   }
 }

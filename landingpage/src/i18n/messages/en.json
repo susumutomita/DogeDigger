@@ -181,5 +181,236 @@
     "status": "All systems operational",
     "copyright": "© 2025 DogeDigger. All rights reserved.",
     "made_with": "Made with 🐕 by the DogeDigger team"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Last Updated",
+    "introduction": "DogeDigger ('we', 'our', or 'us') respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, share, and protect your information.",
+    "back_to_home": "Back to Home",
+    "sections": {
+      "information_collection": {
+        "title": "1. Information We Collect",
+        "personal_info": {
+          "title": "Personal Information",
+          "email": "Email address",
+          "name": "Name (optional)",
+          "wallet": "Wallet address (for NFT usage)"
+        },
+        "usage_info": {
+          "title": "Usage Information",
+          "location": "Location data (during AR treasure hunting)",
+          "device": "Device information (model, OS, etc.)",
+          "interaction": "Service usage history"
+        },
+        "generated_content": {
+          "title": "Generated Content",
+          "ai_art": "AI-generated art metadata",
+          "nft_data": "NFT transaction information"
+        }
+      },
+      "information_use": {
+        "title": "2. How We Use Your Information",
+        "service_provision": "Providing and improving our services",
+        "nft_management": "NFT generation and management",
+        "improvement": "Enhancing user experience",
+        "communication": "Communicating with you",
+        "legal": "Complying with legal obligations"
+      },
+      "data_sharing": {
+        "title": "3. Information Sharing",
+        "introduction": "We do not sell, rent, or share your personal information with third parties except in the following cases:",
+        "blockchain": "Public information on blockchain (NFT-related)",
+        "service_providers": "Service providers necessary for our operations",
+        "legal_requirements": "When required by law"
+      },
+      "data_security": {
+        "title": "4. Data Security",
+        "description": "We implement industry-standard security measures to protect your information. We use encryption, access controls, and regular security audits to ensure the safety of your data."
+      },
+      "your_rights": {
+        "title": "5. Your Rights",
+        "access": "Right to access your personal information",
+        "correction": "Right to correct or update information",
+        "deletion": "Right to request deletion",
+        "portability": "Right to data portability",
+        "objection": "Right to object to processing"
+      },
+      "cookies": {
+        "title": "6. Cookies",
+        "description": "We use cookies to improve and personalize our services. You can control cookie usage through your browser settings."
+      },
+      "children": {
+        "title": "7. Children's Privacy",
+        "description": "Our services are intended for users aged 13 and above. We do not intentionally collect personal information from children under 13."
+      },
+      "updates": {
+        "title": "8. Policy Updates",
+        "description": "This Privacy Policy may be updated from time to time. We will notify you of significant changes through our service or email."
+      },
+      "contact": {
+        "title": "9. Contact Us",
+        "description": "If you have questions or concerns about privacy, please contact us at:"
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "last_updated": "Last Updated",
+    "introduction": "These Terms of Service ('Terms') define the conditions for using services provided by DogeDigger ('we', 'our', or 'us'). Please read these Terms carefully before using our services.",
+    "back_to_home": "Back to Home",
+    "sections": {
+      "service_overview": {
+        "title": "1. Service Overview",
+        "description": "DogeDigger provides the following services:",
+        "robot_dog": "Real-world exploration using robot dogs",
+        "ar_treasure": "AR treasure hunting experiences",
+        "ai_art": "AI-generated art creation",
+        "nft_minting": "NFT minting of generated art"
+      },
+      "eligibility": {
+        "title": "2. Eligibility",
+        "description": "To use our services, you must:",
+        "age": "Be at least 13 years old",
+        "legal_capacity": "Have legal capacity to enter contracts",
+        "compliance": "Comply with these Terms"
+      },
+      "account": {
+        "title": "3. Account Registration",
+        "description": "Some services require account registration:",
+        "accurate_info": "Provide accurate information",
+        "security": "Maintain account security",
+        "responsibility": "Be responsible for account activities"
+      },
+      "nft": {
+        "title": "4. NFT and Digital Assets",
+        "description": "Important NFT information:",
+        "ownership": "NFT ownership is recorded on blockchain",
+        "blockchain": "We use Base chain",
+        "gas_fees": "Gas fees are your responsibility",
+        "no_guarantee": "No value guarantee"
+      },
+      "acceptable_use": {
+        "title": "5. Acceptable Use",
+        "description": "The following activities are prohibited:",
+        "lawful": "Illegal activities",
+        "no_harm": "Harassing others",
+        "no_interference": "Interfering with service operations",
+        "no_reverse_engineering": "Reverse engineering"
+      },
+      "intellectual_property": {
+        "title": "6. Intellectual Property",
+        "description": "Regarding intellectual property rights:",
+        "user_content": {
+          "title": "User Content",
+          "description": "You retain rights to content you create. However, you grant us necessary licenses to provide our services."
+        },
+        "ai_generated": {
+          "title": "AI-Generated Content",
+          "description": "Copyright in AI-generated art is transferred to you upon NFT minting."
+        }
+      },
+      "privacy": {
+        "title": "7. Privacy",
+        "description": "Please refer to our Privacy Policy for information on how we handle personal data."
+      },
+      "disclaimers": {
+        "title": "8. Disclaimers",
+        "as_is": "Services are provided 'as is'.",
+        "no_warranty": "We make no warranties regarding completeness, accuracy, or usefulness of our services."
+      },
+      "liability": {
+        "title": "9. Limitation of Liability",
+        "description": "To the maximum extent permitted by law, we are not liable for indirect, incidental, special, or consequential damages."
+      },
+      "indemnification": {
+        "title": "10. Indemnification",
+        "description": "You agree to indemnify and defend us from third-party claims arising from your use of our services."
+      },
+      "termination": {
+        "title": "11. Termination",
+        "description": "You may delete your account at any time. We reserve the right to suspend services for Terms violations."
+      },
+      "governing_law": {
+        "title": "12. Governing Law",
+        "description": "These Terms are governed by Japanese law, with Tokyo District Court as the exclusive jurisdiction."
+      },
+      "changes": {
+        "title": "13. Changes to Terms",
+        "description": "We may update these Terms as needed. We will notify you of significant changes."
+      },
+      "contact": {
+        "title": "14. Contact Information",
+        "description": "For questions about these Terms, please contact us at:"
+      }
+    }
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "last_updated": "Last Updated",
+    "back_to_home": "Back to Home",
+    "sections": {
+      "seller": {
+        "title": "Seller Information",
+        "name_label": "Business Name",
+        "representative_label": "Representative",
+        "address_label": "Address"
+      },
+      "contact": {
+        "title": "Contact Information",
+        "email_label": "Email Address",
+        "hours_label": "Business Hours",
+        "note": "Inquiries are accepted via email."
+      },
+      "pricing": {
+        "title": "Pricing",
+        "description": "Prices for each service plan are displayed on the service page.",
+        "display_price": "Displayed prices are the payment amount",
+        "tax_included": "Prices include tax",
+        "gas_fees": "NFT minting gas fees are separate"
+      },
+      "payment": {
+        "title": "Payment Methods",
+        "credit_card": "Credit Cards (Visa, Mastercard, American Express, JCB)",
+        "crypto": "Cryptocurrency (ETH, USDC)",
+        "note": "Payments are processed through secure payment systems."
+      },
+      "payment_timing": {
+        "title": "Payment Terms",
+        "description": "Payment required before service use. Monthly plans auto-renew."
+      },
+      "delivery": {
+        "title": "Delivery Time",
+        "digital_content": "Digital content is available immediately after payment.",
+        "nft": "NFTs are sent to specified wallet addresses after generation."
+      },
+      "returns": {
+        "title": "Returns and Exchanges",
+        "digital_nature": "Due to the digital nature, returns and exchanges are generally not accepted.",
+        "defect_policy": "If there are service defects, please contact support promptly."
+      },
+      "cancellation": {
+        "title": "Cancellation Policy",
+        "policy": "Monthly plans can be cancelled 24 hours before renewal. No prorated refunds."
+      },
+      "requirements": {
+        "title": "System Requirements",
+        "mobile": {
+          "title": "Mobile App"
+        },
+        "ar": {
+          "title": "AR-Compatible Devices"
+        },
+        "browser": {
+          "title": "Recommended Browsers"
+        }
+      },
+      "notes": {
+        "title": "Additional Notes",
+        "blockchain_nature": "Blockchain transactions are irreversible",
+        "crypto_wallet": "Crypto wallet required for NFT receipt",
+        "gas_responsibility": "Gas fee fluctuation risk is customer's responsibility",
+        "age_restriction": "Not available for users under 13"
+      }
+    }
   }
 }
