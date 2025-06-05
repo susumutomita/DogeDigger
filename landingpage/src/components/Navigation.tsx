@@ -16,7 +16,7 @@ export default function Navigation() {
       setIsScrolled(window.scrollY > 10);
 
       // アクティブセクションの検出
-      const sections = ['features', 'demo', 'pricing', 'team'];
+      const sections = ['features', 'demo', 'pricing'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -40,7 +40,6 @@ export default function Navigation() {
     { href: '#features', label: t('navigation.features') },
     { href: '#demo', label: t('navigation.demo') },
     { href: '#pricing', label: t('navigation.pricing') },
-    { href: '#team', label: t('navigation.team') },
   ];
 
   return (
