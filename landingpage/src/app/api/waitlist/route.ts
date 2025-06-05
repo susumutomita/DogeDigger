@@ -4,7 +4,7 @@ import { supabase, isSupabaseConfigured } from '@/lib/supabase';
 export async function POST(request: NextRequest) {
   try {
     // Supabaseが設定されていない場合はモックレスポンスを返す
-    if (!isSupabaseConfigured) {
+    if (!isSupabaseConfigured || !supabase) {
       console.warn('Supabase not configured, returning mock response');
       return NextResponse.json({
         success: true,
@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
 export async function GET() {
   try {
     // Supabaseが設定されていない場合はモック値を返す
-    if (!isSupabaseConfigured) {
+    if (!isSupabaseConfigured || !supabase) {
       return NextResponse.json({
         totalRegistrations: 42, // 控えめなデモ用の値
       });
