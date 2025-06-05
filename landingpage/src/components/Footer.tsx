@@ -15,12 +15,6 @@ export default function Footer() {
       { label: t('footer.product_links.pricing'), href: '#pricing' },
       { label: t('footer.product_links.roadmap'), href: '#roadmap' },
     ],
-    company: [
-      { label: t('footer.company_links.team'), href: '#team' },
-      { label: t('footer.company_links.blog'), href: '#blog' },
-      { label: t('footer.company_links.contact'), href: '#contact' },
-      { label: t('footer.company_links.press'), href: '#press' },
-    ],
     legal: [
       { label: t('footer.legal_links.terms'), href: '#terms' },
       { label: t('footer.legal_links.privacy'), href: '#privacy' },
@@ -51,7 +45,7 @@ export default function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4 group">
@@ -92,24 +86,6 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-[#FF6B35] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
-              {t('footer.links.company')}
-            </h3>
-            <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
