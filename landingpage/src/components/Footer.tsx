@@ -13,7 +13,6 @@ export default function Footer() {
       { label: t('footer.product_links.features'), href: '#features' },
       { label: t('footer.product_links.demo'), href: '#demo' },
       { label: t('footer.product_links.pricing'), href: '#pricing' },
-      { label: t('footer.product_links.roadmap'), href: '#roadmap' },
     ],
     legal: [
       { label: t('footer.legal_links.terms'), href: '/terms' },
