@@ -6,6 +6,22 @@
 
 ### Vercelでのデプロイ
 
+ウェイトリスト機能は**Google Sheets**または**Supabase**のどちらかを選択できます。
+
+#### オプション1: Google Sheetsを使用（推奨・無料）
+
+1. **Google Sheetsの設定**
+   - [セットアップガイド](./docs/google-sheets-setup.md)に従ってGoogle Sheetsを設定
+   - Google Apps ScriptをデプロイしてWeb App URLを取得
+
+2. **環境変数の設定**
+   ```
+   GOOGLE_SCRIPT_URL=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
+   NEXT_PUBLIC_BASE_URL=https://your-domain.vercel.app
+   ```
+
+#### オプション2: Supabaseを使用
+
 1. **環境変数の設定**
 
    Vercelのプロジェクト設定で以下の環境変数を設定してください：
@@ -62,8 +78,9 @@
 
 ## 📝 注意事項
 
-- Supabaseの環境変数が設定されていない場合、デモモードで動作します
-- 本番環境では必ずSupabaseの環境変数を設定してください
+- Google SheetsまたはSupabaseのいずれかの環境変数を設定してください
+- どちらも設定されていない場合、デモモードで動作します
+- Google Sheetsを使用する場合は無料で、データベースの設定が不要です
 - 環境変数未設定時もビルドエラーにならないよう、フォールバック処理を実装済み
 
 ## 🎨 デザイン
