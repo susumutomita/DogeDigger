@@ -1,12 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
 import { useTranslationContext } from '@/context/TranslationContext';
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
   const { t } = useTranslationContext();
   const footerLinks = {
     product: [
@@ -24,14 +21,6 @@ export default function Footer() {
       { label: t('footer.social_links.discord'), href: 'https://discord.com', icon: '💬' },
       { label: t('footer.social_links.github'), href: 'https://github.com', icon: '🐙' },
     ],
-  };
-
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Implement newsletter subscription
-    console.log('Subscribe:', email);
-    setSubscribed(true);
-    setTimeout(() => setSubscribed(false), 3000);
   };
 
   return (
@@ -113,37 +102,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-
-        {/* Newsletter */}
-        <div className="border-t border-gray-200/50 dark:border-gray-800/50 pt-12 mb-12">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-2 gradient-text">
-              {t('footer.newsletter.title')}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              {t('footer.newsletter.description')}
-            </p>
-            <form
-              onSubmit={handleSubscribe}
-              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-            >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder={t('waitlist.form.email_placeholder')}
-                required
-                className="flex-1 px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-full focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent dark:bg-gray-800/50 backdrop-blur-sm"
-              />
-              <button
-                type="submit"
-                className="px-8 py-3 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] text-white font-medium rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 whitespace-nowrap"
-              >
-                {subscribed ? t('footer.newsletter.success') : t('footer.newsletter.submit')}
-              </button>
-            </form>
           </div>
         </div>
 
