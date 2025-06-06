@@ -35,15 +35,15 @@ export default function LegalPage() {
             <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl space-y-3">
               <div>
                 <span className="font-semibold">{t('legal.sections.seller.name_label')}:</span>
-                <span className="ml-2 text-gray-700 dark:text-gray-300">DogeDigger運営事務局</span>
+                <span className="ml-2 text-gray-700 dark:text-gray-300">個人事業主として準備中</span>
               </div>
               <div>
                 <span className="font-semibold">{t('legal.sections.seller.representative_label')}:</span>
-                <span className="ml-2 text-gray-700 dark:text-gray-300">代表者名</span>
+                <span className="ml-2 text-gray-700 dark:text-gray-300">（サービス開始時に記載）</span>
               </div>
               <div>
                 <span className="font-semibold">{t('legal.sections.seller.address_label')}:</span>
-                <span className="ml-2 text-gray-700 dark:text-gray-300">〒150-0000 東京都渋谷区</span>
+                <span className="ml-2 text-gray-700 dark:text-gray-300">（サービス開始時に記載）</span>
               </div>
             </div>
           </section>
