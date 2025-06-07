@@ -27,7 +27,7 @@ export default function DemoSection() {
           {!showVideo ? (
             <>
               {/* Video thumbnail */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 pointer-events-none" />
               <Image
                 src="https://img.youtube.com/vi/w-pk6swpKLc/maxresdefault.jpg"
                 alt="DogeDigger デモビデオ"
