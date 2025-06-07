@@ -5,7 +5,7 @@ import { useTranslationContext } from '@/context/TranslationContext';
 import Link from 'next/link';
 
 export default function CookieBanner() {
-  const { t, locale } = useTranslationContext();
+  const { locale } = useTranslationContext();
   const [isVisible, setIsVisible] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
 
@@ -22,17 +22,6 @@ export default function CookieBanner() {
       necessary: true,
       analytics: true,
       marketing: true,
-      timestamp: new Date().toISOString(),
-    };
-    localStorage.setItem('cookie-consent', JSON.stringify(consentData));
-    setIsVisible(false);
-  };
-
-  const handleAcceptNecessary = () => {
-    const consentData = {
-      necessary: true,
-      analytics: false,
-      marketing: false,
       timestamp: new Date().toISOString(),
     };
     localStorage.setItem('cookie-consent', JSON.stringify(consentData));

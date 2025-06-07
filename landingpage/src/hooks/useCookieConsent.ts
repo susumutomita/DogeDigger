@@ -57,6 +57,9 @@ export function useCookieConsent() {
 // グローバル型定義
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (
+      command: 'config' | 'event' | 'js' | 'set' | 'consent',
+      ...args: Array<string | Record<string, unknown>>
+    ) => void;
   }
 }
