@@ -65,7 +65,7 @@ export default function CookieBanner() {
                 ? '当サイトでは、最適なユーザー体験を提供するためにクッキーを使用しています。'
                 : 'We use cookies to provide you with the best user experience.'}
             </p>
-            
+
             {showDetails && (
               <div className="mt-4 space-y-3 text-sm">
                 <div>
@@ -100,24 +100,25 @@ export default function CookieBanner() {
                 </div>
               </div>
             )}
-            
+
             <button
               onClick={() => setShowDetails(!showDetails)}
               className="text-sm text-[#FF6B35] hover:underline mt-2"
             >
               {showDetails
-                ? (locale === 'ja' ? '詳細を隠す' : 'Hide details')
-                : (locale === 'ja' ? '詳細を表示' : 'Show details')}
+                ? locale === 'ja'
+                  ? '詳細を隠す'
+                  : 'Hide details'
+                : locale === 'ja'
+                  ? '詳細を表示'
+                  : 'Show details'}
             </button>
-            
-            <Link
-              href="/privacy"
-              className="text-sm text-[#FF6B35] hover:underline ml-4"
-            >
+
+            <Link href="/privacy" className="text-sm text-[#FF6B35] hover:underline ml-4">
               {locale === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}
             </Link>
           </div>
-          
+
           <div className="flex flex-wrap gap-2">
             <button
               onClick={handleRejectAll}

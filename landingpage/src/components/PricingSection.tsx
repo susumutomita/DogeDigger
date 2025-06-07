@@ -92,7 +92,9 @@ export default function PricingSection() {
                 </div>
               )}
 
-              <h3 className="text-2xl font-bold mb-2 line-clamp-1">{t(`pricing.plans.${plan.id}.name`)}</h3>
+              <h3 className="text-2xl font-bold mb-2 line-clamp-1">
+                {t(`pricing.plans.${plan.id}.name`)}
+              </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
                 {t(`pricing.plans.${plan.id}.description`)}
               </p>

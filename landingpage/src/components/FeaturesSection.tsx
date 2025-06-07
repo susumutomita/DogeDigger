@@ -41,11 +41,11 @@ const features = [
 
 export default function FeaturesSection() {
   const [hoveredFeature, setHoveredFeature] = useState<string | null>(null);
-  const [selectedFeature, setSelectedFeature] = useState<typeof features[0] | null>(null);
+  const [selectedFeature, setSelectedFeature] = useState<(typeof features)[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useTranslationContext();
 
-  const handleFeatureClick = (feature: typeof features[0]) => {
+  const handleFeatureClick = (feature: (typeof features)[0]) => {
     if (feature.id !== 'innovation') {
       setSelectedFeature(feature);
       setIsModalOpen(true);
@@ -89,7 +89,9 @@ export default function FeaturesSection() {
                   <div className="h-full flex flex-col justify-center items-center text-center">
                     <div className="space-y-4">
                       <div className="text-5xl mb-4">🚀</div>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">{t('features.innovation.title')}</h3>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                        {t('features.innovation.title')}
+                      </h3>
                       <p className="text-sm text-gray-700 dark:text-gray-200">
                         {t('features.innovation.description')}
                       </p>
