@@ -3,63 +3,57 @@
 import { useState } from 'react';
 import { useTranslationContext } from '@/context/TranslationContext';
 import TitleWithGradient from './TitleWithGradient';
+import FeatureModal from './FeatureModal';
 
 const features = [
   {
     id: 'robot',
     icon: '🤖',
-    title: 'ロボット犬と冒険',
-    description: '最先端のロボット犬が現実世界をマッピングしながら、あなたと一緒に宝探しの冒険へ',
-    details:
-      '内蔵センサーとカメラで周囲をスキャンし、UnityのARマッピング技術で現実とデジタルをシンクロ',
     gridClass: 'md:col-span-2 md:row-span-1',
-    bgColor: 'from-[#FF6B35]/10 to-[#FFE66D]/10',
+    bgColor: 'from-[#FF6B35]/20 to-[#FFE66D]/20',
   },
   {
     id: 'ar',
     icon: '🔮',
-    title: 'AR宝探し体験',
-    description: 'スマホやMeta Quest 3を通じて、現実空間に隠された宝箱を発見',
-    details: '公園やイベント会場が冒険の舞台に。家族や友人と一緒に楽しめる新しいお出かけコンテンツ',
     gridClass: 'md:col-span-1 md:row-span-2',
-    bgColor: 'from-[#4ECDC4]/10 to-[#FF6B35]/10',
+    bgColor: 'from-[#4ECDC4]/20 to-[#FF6B35]/20',
   },
   {
     id: 'ai',
     icon: '🎨',
-    title: 'AI生成アート',
-    description: 'その場の特徴を元に、世界に一つだけのアートを生成',
-    details: '地形やランドマークを元にテキストプロンプトを生成し、高品質な画像をクラウドで生成',
     gridClass: 'md:col-span-1 md:row-span-1',
-    bgColor: 'from-[#FFE66D]/10 to-[#4ECDC4]/10',
+    bgColor: 'from-[#FFE66D]/20 to-[#4ECDC4]/20',
   },
   {
     id: 'nft',
     icon: '💎',
-    title: 'NFTとして永久保存',
-    description: '生成されたアートは即座にNFT化',
-    details: 'Baseチェーン上のスマートコントラクトで、その場でミント。後から転売や交換も可能',
     gridClass: 'md:col-span-1 md:row-span-1',
-    bgColor: 'from-[#FF6B35]/10 to-[#4ECDC4]/10',
+    bgColor: 'from-[#FF6B35]/20 to-[#4ECDC4]/20',
   },
   {
     id: 'innovation',
     icon: '🚀',
-    title: '革新的体験',
-    description: '',
-    details: '',
     gridClass: 'md:col-span-1 md:row-span-1',
-    bgColor: 'from-[#4ECDC4]/10 to-[#FFE66D]/10',
+    bgColor: 'from-[#4ECDC4]/20 to-[#FFE66D]/20',
     isStats: true,
   },
 ];
 
 export default function FeaturesSection() {
   const [hoveredFeature, setHoveredFeature] = useState<string | null>(null);
+  const [selectedFeature, setSelectedFeature] = useState<typeof features[0] | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useTranslationContext();
 
+  const handleFeatureClick = (feature: typeof features[0]) => {
+    if (feature.id !== 'innovation') {
+      setSelectedFeature(feature);
+      setIsModalOpen(true);
+    }
+  };
+
   return (
-    <section id="features" className="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
+    <section id="features" className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <TitleWithGradient
@@ -77,15 +71,16 @@ export default function FeaturesSection() {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className={`group relative bg-gradient-to-br ${feature.bgColor} backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg transition-all duration-300 cursor-pointer overflow-hidden
+              className={`group relative bg-gradient-to-br ${feature.bgColor} bg-white dark:bg-gray-800 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg transition-all duration-300 cursor-pointer overflow-hidden
                 ${feature.gridClass}
                 ${hoveredFeature === feature.id ? 'scale-[1.02] shadow-2xl' : ''}
               `}
               onMouseEnter={() => setHoveredFeature(feature.id)}
               onMouseLeave={() => setHoveredFeature(null)}
+              onClick={() => handleFeatureClick(feature)}
             >
               {/* Hover Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] opacity-0 group-hover:opacity-10 transition-opacity duration-300 -z-10" />
 
               {/* Content */}
               <div className="relative z-10 h-full flex flex-col">
@@ -94,8 +89,8 @@ export default function FeaturesSection() {
                   <div className="h-full flex flex-col justify-center items-center text-center">
                     <div className="space-y-4">
                       <div className="text-5xl mb-4">🚀</div>
-                      <h3 className="text-xl font-bold">{t('features.innovation.title')}</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">{t('features.innovation.title')}</h3>
+                      <p className="text-sm text-gray-700 dark:text-gray-200">
                         {t('features.innovation.description')}
                       </p>
                     </div>
@@ -103,10 +98,10 @@ export default function FeaturesSection() {
                 ) : (
                   <>
                     <div className="text-4xl md:text-5xl mb-4">{feature.icon}</div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-3 line-clamp-2">
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 line-clamp-2 text-gray-900 dark:text-white">
                       {t(`features.${feature.id}.title`)}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow line-clamp-3">
+                    <p className="text-gray-700 dark:text-gray-200 mb-4 flex-grow line-clamp-3">
                       {t(`features.${feature.id}.description`)}
                     </p>
 
@@ -114,7 +109,7 @@ export default function FeaturesSection() {
                     <div
                       className={`overflow-hidden transition-all duration-300 ${hoveredFeature === feature.id ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}
                     >
-                      <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-4">
+                      <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-4">
                         {t(`features.${feature.id}.details`)}
                       </p>
                     </div>
@@ -145,8 +140,8 @@ export default function FeaturesSection() {
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-[#FFE66D] to-transparent rounded-full opacity-20 blur-3xl" />
-              <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-tr from-[#4ECDC4] to-transparent rounded-full opacity-20 blur-3xl" />
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-[#FFE66D] to-transparent rounded-full opacity-20 blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-gradient-to-tr from-[#4ECDC4] to-transparent rounded-full opacity-20 blur-3xl pointer-events-none" />
             </div>
           ))}
         </div>
@@ -191,6 +186,16 @@ export default function FeaturesSection() {
           </div>
         </div>
       </div>
+
+      {/* Feature Modal */}
+      <FeatureModal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedFeature(null);
+        }}
+        feature={selectedFeature}
+      />
     </section>
   );
 }
