@@ -28,14 +28,14 @@ export default function WaitlistSection() {
     fetch('/api/waitlist')
       .then((res) => res.json())
       .then((data) => {
-        if (data.totalRegistrations) {
+        if (typeof data.totalRegistrations === 'number') {
           setTotalRegistrations(data.totalRegistrations);
         }
       })
       .catch((error) => {
         console.error('Failed to fetch registration count:', error);
       });
-  }, []);
+  }, [submitted]); // submittedが変わったら再取得
 
   const interests = [
     {
@@ -298,12 +298,14 @@ export default function WaitlistSection() {
           </p>
         </form>
 
-        {/* Social Proof */}
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-600 dark:text-gray-300">
-            {t('waitlist.social_proof', { count: totalRegistrations.toLocaleString() })}
-          </p>
-        </div>
+        {/* Social Proof - 登録者が1人以上いる場合のみ表示 */}
+        {totalRegistrations > 0 && (
+          <div className="mt-8 text-center">
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              {t('waitlist.social_proof', { count: totalRegistrations.toLocaleString() })}
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
