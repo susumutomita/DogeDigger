@@ -80,7 +80,7 @@ export default function FeaturesSection() {
               onClick={() => handleFeatureClick(feature)}
             >
               {/* Hover Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] opacity-0 group-hover:opacity-10 transition-opacity duration-300 -z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B35] to-[#4ECDC4] opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none" />
 
               {/* Content */}
               <div className="relative z-10 h-full flex flex-col">
