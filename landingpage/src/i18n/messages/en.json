@@ -161,12 +161,6 @@
     "social_proof": "{count} people already registered"
   },
   "footer": {
-    "newsletter": {
-      "title": "Stay Updated",
-      "description": "Get product updates and exclusive offers via email",
-      "submit": "Subscribe",
-      "success": "✓ Subscribed"
-    },
     "links": {
       "product": "Product",
       "company": "Company",
