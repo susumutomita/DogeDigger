@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Noto_Sans_JP, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { TranslationProvider } from '@/context/TranslationContext';
+import CookieBanner from '@/components/CookieBanner';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -59,7 +60,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${notoSansJP.variable} ${jetBrainsMono.variable} antialiased`}
       >
-        <TranslationProvider>{children}</TranslationProvider>
+        <TranslationProvider>
+          {children}
+          <CookieBanner />
+        </TranslationProvider>
       </body>
     </html>
   );

@@ -248,7 +248,22 @@
       },
       "cookies": {
         "title": "6. Cookies",
-        "description": "We use cookies to improve and personalize our services. You can control cookie usage through your browser settings."
+        "description": "We use cookies to improve and personalize our services.",
+        "types": {
+          "necessary": {
+            "title": "Essential Cookies",
+            "description": "Required for basic website functionality. The site cannot function properly without these cookies."
+          },
+          "analytics": {
+            "title": "Analytics Cookies",
+            "description": "Help us understand how visitors use our site and improve it. Includes tools like Google Analytics."
+          },
+          "marketing": {
+            "title": "Marketing Cookies",
+            "description": "Used to show relevant advertisements based on your interests."
+          }
+        },
+        "management": "Cookie settings can be changed through your browser settings or the cookie banner on our site."
       },
       "children": {
         "title": "7. Children's Privacy",
