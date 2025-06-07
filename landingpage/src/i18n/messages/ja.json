@@ -156,12 +156,6 @@
     "social_proof": "{count}人が既に登録済み"
   },
   "footer": {
-    "newsletter": {
-      "title": "最新情報をお届け",
-      "description": "プロダクトアップデートや限定オファーをメールでお知らせします",
-      "submit": "購読する",
-      "success": "✓ 登録完了"
-    },
     "links": {
       "product": "プロダクト",
       "company": "会社情報",
